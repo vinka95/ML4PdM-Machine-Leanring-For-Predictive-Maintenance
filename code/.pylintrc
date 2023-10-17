@@ -1,0 +1,8 @@
+[FORMAT]
+max-line-length=150
+
+[MASTER]
+init-hook=
+    sys.path.append(os.getcwd());
+disable=
+    C0114, # missing-module-docstring

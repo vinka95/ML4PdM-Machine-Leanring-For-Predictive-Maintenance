@@ -1,0 +1,7 @@
+[report]
+exclude_lines =
+    pragma: no cover
+    ^__all__ = \[.*$
+    ^from .+ import .+$
+    ^import .+$
+    ^class (Predictor|HealthIndexEstimator|RemainingUsefulLifetimeEstimator|TimeSeriesTransformer|Transformer|FixedSizeFeatureExtractor)\(.+\):$
