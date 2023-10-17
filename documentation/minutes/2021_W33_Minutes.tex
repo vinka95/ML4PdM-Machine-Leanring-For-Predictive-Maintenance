@@ -1,0 +1,37 @@
+\documentclass[11pt]{meetingmins} % Using meetingmins LaTeX class.
+
+\setcommittee{Project Group: Machine Learning for Predictive Maintenance}
+
+\setdate{August 19, 2021. 13:30 - 15:30}
+
+\setpresent{Tanja Tornede \textit{(Supervisor)}, Christopher Zinda, Paul Fährmann, Sanjay Gupta, Vinay Kaundinya.}
+
+\absent{}
+
+\begin{document}
+
+\maketitle
+
+\section{Minutes-taker: Vinay Kaundinya}
+
+\section{Topics Discussed:}
+
+\subsection{Implementation}
+\subsubsection{Details}
+\begin{hiddensubitems}
+    \item Discussed progress for the week W32.
+    \item @Paul discussed about the attribute filter that is newly added, in context of timeseries processing and constant sensor value columns.
+    \item @Paul, currently working on multi processing of timeseries, parallelization ideas etc with sklearn (njobs). Have a method for attribute filter (in dataset class) or as a pipeline element.
+    \item @Sanjay RNN encoder, Weighted Avg already implemented and merged to Develop and windowing approach (already implemented by Christopher).
+    \item @Vinay to merge SVR, CNN and LSTM approaches to develop.
+    \item @Christopher to implement and finalize Random forest approach.
+    \item Discussed about having a verbose like parameter for ml4pdm(every?) pipeline element. @Sanjay
+    \item Discussed initial details of documentation(sphinx) and final presentation.
+\end{hiddensubitems}
+
+\section{Next Meeting:}
+\begin{hiddensubitems}
+    \item Date and time: August 26, 2021 at 10:00 - 12:00
+    \item Person responsible for minutes: Christopher Zinda
+\end{hiddensubitems}
+\end{document}

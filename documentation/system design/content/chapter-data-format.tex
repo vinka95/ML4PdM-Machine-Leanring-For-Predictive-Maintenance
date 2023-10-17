@@ -1,0 +1,268 @@
+% !TEX root = ../main_sys.tex
+%
+\chapter{Data Format}
+\vspace*{-15mm}\hfill{\fontfamily{phv}\normalsize\emph{Paul Fährmann, Selami Hoxha and Vinay Kaundinya}}
+\label{sec:data_format}
+\\\\
+We define a general data format that can be used for Predictive Maintenance data sets. Our format: \textit{Predictive Maintenance File Format} (PDMFF) is based on the \textit{Attribute Relation File Format} (ARFF\footnote{\href{https://www.cs.waikato.ac.nz/ml/weka/arff.html}{https://www.cs.waikato.ac.nz/ml/weka/arff.html}}) that is commonly used for machine learning data.
+
+\section{Predictive Maintenance File Format (PDMFF)}
+\vspace*{-5mm}\hfill{\fontfamily{phv}\normalsize\emph{Paul Fährmann, Vinay Kaundinya}}
+\vspace*{+5mm}
+\\
+
+PDMFF is is a data format that describes a list of instances for a set of sensors. PDMFF is divided into Header section and Data section. In the header section all the attributes are declared and the data section represents the actual data.
+Before we define the keywords in header and data sections, we need to define some basic placeholders.
+
+\textbf{Placeholders}
+\begin{itemize}
+    \item \textbf{<name>} is a string used to specify a meaningful name for a keyword.
+    \item \textbf{<attribute-type>} is used to specify the type of value the \textbf{@ATTRIBUTE} keyword holds.
+    \item \textbf{<target-type>} is used to specify the type of value the \textbf{@TARGET} keyword holds.
+    \item \textbf{<timestep-type>} is used to specify the data type of timestep. This is used only in TIMESERIES attribute, described later in the chapter.
+\end{itemize}
+
+\textbf{Header}: Header section consists metadata of the data that is stored. This information describes different sensors, the type of value recorded relation between the data using keywords such as \textbf{@RELATION}, \textbf{@ATTRIBUTE} and \textbf{@TARGET}.
+
+\textbf{@RELATION} statement defines relation between the different attributes(sensors in our case) by specifying a name.
+\begin{verbatim}
+   %Format
+   @RELATION <name>
+   
+   %Example
+   @RELATION ml4pdm
+\end{verbatim}
+Each parameter in the dataset is associated with an attribute and is declared using \textbf{@ATTRIBUTE} statement. It also defines a meaning full name using <name> and its associated data type (<attribute-type>).
+% Different <attribute-type>s are described in table \ref{table:1}
+% \begin{verbatim}
+%     @ATTRIBUTE   <name>    <attribute-type>
+%  \end{verbatim}
+% \begin{table}
+%     \caption{Different attribute types}
+%     \label{table:1}
+%     \begin{tabular}{m{8cm}|m{7cm}}
+%         \hline \textbf{Attribute Type}                                                                                                                                    & \textbf{Header and Data Instance } \\ \hline \textbf{NUMERIC} used to specify all numeric parameters. \newline Attribute of this type can take values that are integers, float values etc. \newline \begin{verbatim}@ATTRIBUTE <name> NUMERIC\end{verbatim} &\begin{verbatim}%Header
+% @ATTRIBUTE sensor1 NUMERIC
+
+% @DATA 
+% %instance 1
+% 12.1 \end{verbatim} \\ \hline An attribute can take one of the labels from a set of labels. \newline Attribute is restricted to only the $k$ labels in the set. \newline Format: \begin{verbatim}@ATTRIBUTE <name> {lab_1,..,lab_k}\end{verbatim} & \begin{verbatim}%Header 
+% @ATTRIBUTE sensor2 {A,B,C}
+
+% @DATA
+% %instance 1
+% A \end{verbatim}                                                                                                                                                                        \\ \hline \textbf{DATETIME} is used to specify values of format MM/DD/YYYY-HHMMSSsssss. \newline \begin{verbatim} @ATTRIBUTE <name> DATETIME \end{verbatim} &\begin{verbatim}%Header
+% @ATTRIBUTE sensor3 DATETIME
+
+% @DATA
+% %instance 1
+% 02.12.2004.10.32.39 \end{verbatim}\\ \hline
+%         T\textbf{IMESERIES} represents an attribute whose recorded value is timeseries data. \newline Defined using tuples encapsulated within \{<timestep-type>:<attribute-type>\}.\newline <timestep-type> can be of NUMERIC or DATETIME type.\newline
+%         \begin{verbatim}
+% @ATTRIBUTE <name> TIMESERIES(<timestep-
+% type>:<attribute-type>) 
+% \end{verbatim}                                                                                                                                            & \begin{verbatim}%Header
+% @ATTRIBUTE sensor4 TIMESERIES(NUMERIC:
+% NUMERIC)
+
+% @DATA
+% %instance 1
+% (1:0.0023,2:-0.0027,3:0.0003,..
+% ..,31:-0.0006)\end{verbatim}
+%         \\ \hline
+%         A multidimensional attribute is specified using \textbf{MULTIDIMENSIONAL} keyword.\newline Their dimensions encapsulated in [ ]. \newline \begin{verbatim}@ATTRIBUTE <name> MULTIDIMENSIONAL[dim_1
+% dim_2,..,dim_n] \end{verbatim} & \begin{verbatim}%Header
+% @ATTRIBUTE sensor5 MULTIDIMENSIONAL[4]
+
+% @DATA
+% %instance 1
+% [12, 23, 46, 78 ] \end{verbatim}
+%         \\ \hline\end{tabular} \end{table}
+An <attribute-type> can take following values:
+\begin{itemize}
+\item NUMERIC used to specify all numeric parameters. Attribute of this type can take values that are integers, float values etc.
+\begin{verbatim}
+    %Format
+    @ATTRIBUTE  <name>  NUMERIC
+
+    %Example
+    %Header Instance
+    @ATTRIBUTE  sensor1 NUMERIC
+    
+    @DATA 
+    %instance 1
+    12.1
+\end{verbatim}
+% \item STRING used to specify parameters with string values.
+% \begin{verbatim}
+%         Format --  @ATTRIBUTE   <name>    <attribute-type>
+%         ex     --  @ATTRIBUTE   sensor2    STRING     
+%     \end{verbatim}
+\item An attribute can take one of the labels from a set of labels. Attribute is restricted to only the $k$ labels in the set.
+\begin{verbatim}
+    %Format
+    @ATTRIBUTE  <name>  {lab_1,..,lab_k}  
+    
+    %Example
+    %Header Instance
+    @ATTRIBUTE sensor2 {A,B,C}
+    
+    @DATA
+    %instance 1
+    A
+\end{verbatim}
+\item DATETIME is used to specify values of format MM/DD/YYYY-HHMMSSsssss.
+\begin{verbatim}
+    %Format
+    @ATTRIBUTE <name> DATETIME
+    
+    %Example
+    %Header Instance
+    @ATTRIBUTE sensor3 DATETIME
+
+    @DATA
+    %instance 1
+    02.12.2004.10.32.39
+\end{verbatim}
+\item An attribute whose recorded value is a timeseries can be represented using TIMESERIES attribute-type. A timeseries is defined using tuples encapsulated within { }. Each tuple then has <timestep-type> (data type of time step; NUMERIC, DATETIME) and <attribute-type>(as defined earlier).
+\begingroup
+\fontsize{10pt}{10pt}\selectfont
+\begin{verbatim}
+    %Format
+    @ATTRIBUTE   <name>    TIMESERIES(<timestep-type>:<attribute-type>)
+    
+    %Example
+    %Header Instance
+    @ATTRIBUTE sensor4 TIMESERIES(NUMERIC:NUMERIC)
+    
+    @DATA
+    %instance 1
+    (1:0.0023,2:-0.0027,3:0.0003,....,31:-0.0006)
+\end{verbatim}
+\endgroup
+\item An attribute with multidimensional data is specified using MULTIDIMENSIONAL keyword along with their dimensions encapsulated in [ ].
+\begingroup
+\fontsize{10pt}{12pt}\selectfont
+\begin{verbatim}
+    %Format
+    @ATTRIBUTE   <name>    MULTIDIMENSIONAL[dim_1, dim_2,..,dim_n]
+    
+    %Example
+    %Header Instance
+    @ATTRIBUTE sensor5 MULTIDIMENSIONAL[4]
+
+    @DATA
+    %instance 1
+    [12, 23, 46, 78 ]
+\end{verbatim}
+\endgroup
+\end{itemize}
+\textbf{@TARGET} statement is used to specify a target variable and the type of value stored is defined using a <target-type>. Target type can be NUMERIC or value can be chosen from a set of values {value1, value2, value3}.
+\begin{verbatim}
+    %Format 
+    @TARGET  <name>	<target-type>
+    
+    %Example
+    %Header Instance
+    @ATTRIBUTE  sensor1  NUMERIC
+    @TARGET  class   {A, B, C}
+
+    @DATA
+    %instance 1
+    12.54#A
+ \end{verbatim}
+\textbf{Data}: This section of the file contains the actual data recorded at different time instances. Data section begins with @DATA statement. Each instance of data is contained in one row, containing all the attribute values which are delimited by a set of separators.
+
+\textbf{Separators}
+\begin{itemize}
+    \item $\#$ separates attributes within an instance row.
+    \item \textbf{:} separates attributes within a timeseries tuple, {timestep:value}.
+    \item \textbf{,} separates timeseries tuples.
+    \item \textbf{\%} to comment lines.
+\end{itemize}
+
+\section{Examples}
+\vspace*{-15mm}\hfill{\fontfamily{phv}\normalsize\emph{Selami Hoxha}}
+\label{sec:data_format:examples}
+
+In this section we present two publicly available dataset in
+the PDMFF format. Have in mind that the instances separated
+by the \# in reality are in one line, but here because of space
+limitations are shown in several lines.
+
+\paragraph{Example 1} As the first example we present the Bearing Degradation Simulation
+dataset \cite{bearingData} in the PDMFF format. The dataset 2
+
+\begin{verbatim}
+        @RELATION bearing_data
+
+        @ATTRIBUTE timestamp DATETIME
+        @ATTRIBUTE sensor_1 TIMESERIES(NUMERIC:NUMERIC)
+        @ATTRIBUTE sensor_2 TIMESERIES(NUMERIC:NUMERIC)
+        @ATTRIBUTE sensor_3 TIMESERIES(NUMERIC:NUMERIC)
+        @ATTRIBUTE sensor_4 TIMESERIES(NUMERIC:NUMERIC)
+
+        @DATA
+        12/02/2004-103239#
+        (1:-0.049,2:-0.042,3:0.015,...,20480:0.020)#
+        (1:-0.071,2:-0.073,3:0.000,...,20480:0.076)#
+        (1:-0.132,2:-0.007,3:0.007,...,20480:-0.042)#
+        (1:-0.010,2:-0.105,3:0.000,...,20480:-0.029)
+        02/12/2004-104239#
+        (1:-0.088,2:0.022,3:-0.015,...,20480:0.010)#
+        (1:-0.127,2:-0.178,3:-0.066,...,20480:0.029)#
+        (1:0.154,2:-0.073,3:-0.259,...,20480:-0.112)#
+        (1:0.022,2:-0.022,3:-0.056,...,20480:-0.042)
+        ...
+        02/12/2004-062239#
+        (1:--0.002,2:-0.002,3:-0.002,...,20480:-0.002)#
+        (1:-0.002,2:-0.002,3:-0.002,...,20480:0.000)#
+        (1:-0.002,2:-0.000,3:-0.002,...,20480:-0.000)#
+        (1:-0.002,2:-0.002,3:0.000,...,20480:-0.002)
+    \end{verbatim}
+
+\paragraph{Example 2}
+In this example the CMAPSS dataset \cite{cmapssData} is presented in
+the PDMFF format. The presented example is from the test set "test\_FD001" and the RUL
+is given in a separate file called "RUL\_FD001" for the test set.
+
+\begin{verbatim}
+    @RELATION bearing_data
+
+    @ATTRIBUTE	unit_number             NUMERIC
+    @ATTRIBUTE	time_in_cycles          TIMESERIES(NUMERIC:NUMERIC)
+    @ATTRIBUTE	operational_setting_1   TIMESERIES(NUMERIC:NUMERIC)
+    @ATTRIBUTE	operational_setting_2   TIMESERIES(NUMERIC:NUMERIC)
+    @ATTRIBUTE	operational_setting_3   TIMESERIES(NUMERIC:NUMERIC)
+    @ATTRIBUTE	sensor_measurement_1    TIMESERIES(NUMERIC:NUMERIC)
+    @ATTRIBUTE	sensor_measurement_2    TIMESERIES(NUMERIC:NUMERIC)
+    ...
+    @ATTRIBUTE	sensor_measurement_21   TIMESERIES(NUMERIC:NUMERIC)
+    @TARGET     RUL                     NUMERIC
+
+    @DATA
+
+    %instance 1
+    1#
+    (1:1,2:2,3:3,...,31:31)# %This could be removed 
+    (1:0.0023,2:-0.0027,3:0.0003,...,31:-0.0006)#
+    (1:0.0003,2:-0.0003,3:0.0001,...,31:0.0004)#
+    ...
+    (1:23.3735,2:23.3916,3:23.4166,...,31:23.3552)#
+    112
+    %instance 2
+    2#
+    (1:1,2:2,3:3,...,49:49)# %this could be removed
+    (1:-0.0009,2:-0.0011,3:0.0002,...,49:0.0018)#
+    ...
+    (1:-23.3923,2:23.2902,3:23.4064,...,49:23.2618)#
+    98
+    ...
+    %instance 100
+    100#
+    (1:1,2:2,3:3,...,198:198)# %this could be removed
+    (1:0.0014,2:0.0031,3:-0.0000,...,198:0.0013)#
+    ...
+    (1:23.3087,2:23.3510,3:23.3636,...,198:23.1855)#
+    20
+\end{verbatim}

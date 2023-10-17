@@ -1,0 +1,9 @@
+% !TEX root = ../main_sys.tex
+%
+\chapter{Introduction}
+\vspace*{-10mm}\hfill{\fontfamily{phv}\normalsize\emph{Christopher Zinda}}
+\label{sec:intro}
+
+The ML4PdM library provides a powerful framework for creating entire pipelines of predictive maintenance approaches and evaluating those. This document will provide a documentation of the designs and practices that were used to build the library. Details on the implemented approaches and algorithms can be found in our topic study document.
+
+We have developed an advanced data format for storing predictive maintenance datasets in an effective manner (see \ref{sec:data_format}). It is based on the commonly used \textit{Attribute Relation File Format} and is able to handle multivariate time series data. The design of the library, including class diagrams and sequence diagrams along with detailed descriptions, is explained in chapter \ref{sec:system_design}. We have added general class and sequence diagrams to provide an overview of the ML4PdM library. Additionally, there are specialized diagrams for every approach and algorithm that was researched in the topic study document. The last chapter includes tools, practices and rules for quality assurance (see \ref{sec:quality_assurance}). We defined a git strategy to support the collaborative work on the library. To provide an easy-to-use solution, we also defined a documentation strategy and a testing strategy that ensures the correct behavior of the implementation. These steps will be supported by an automated GitLab CI Pipeline to reduce the manual workload for the repetitive tasks.

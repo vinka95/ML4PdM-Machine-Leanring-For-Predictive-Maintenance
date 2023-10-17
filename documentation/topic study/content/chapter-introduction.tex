@@ -1,0 +1,68 @@
+% !TEX root = ../main.tex
+%
+\chapter{Introduction}
+\label{sec:intro}
+
+\cleanchapterquote{Maintenance is terribly important.}{Manolo Blahnik}{(Fashion designer)}
+
+\hfill{\fontfamily{phv}\normalsize\emph{Saghar Haidari \& Hoxha Selami}} \\
+Maintenance costs represent a major part of the total operating costs of firms. It varies between 15 to 60 percent of the cost of final products. The traditional approach of maintenance is a reactive or run-to-failure approach which caused large maintenance costs as well as opportunity costs due to production loss. To deal with these kinds of costs, preventive maintenance was introduced which is, in its traditional form, a time-driven approach. This kind of maintenance is periodic or scheduled with fixed intervals, but this approach still is not able to address some problems like unnecessary maintenance and downtimes because the maintenance operations are fixed and predefined \cite{MOBLEY20021}.
+
+To deal with the problems mentioned above, condition-based preventive maintenance also known as predictive maintenance (PdM) is introduced. It is defined as the process of monitoring the actual condition, operating efficiency, and other indicators that ensure minimum maintenance and system failure/downtimes. In contrary to reactive maintenance which is based on a run-to-failure basis and other preventive maintenance techniques that are time-driven and use historical data without considering the actual conditions for scheduling maintenance, PdM schedules all maintenance activities on an as-needed basis \cite{MOBLEY20021}.
+
+PdM increases the efficiency of the product, competitiveness, and sustainability of manufacturing and processing plants. The main advantages of PdM are lower maintenance costs and unscheduled downtimes, assuring product quality (prevent quality reduction due to deterioration of machines), asset protection (keep assets operable for longer periods of time), reduction in manufacturing overhead costs (through avoiding inefficient energy utilization due to deterioration in manufacturing facilities, lowering insurance costs) and facilitate taking quality certifications like ISO. The main disadvantage of PdM is the high initial and installation costs in comparison to other kinds of maintenance but a reliable implementation of PdM can compensate for the high initial cost by avoiding production loss and other costs due to weak maintenance policies \cite{DBLP:journals/corr/abs-1912-07383,MOBLEY200260}.
+
+In the last decade with the improvement of sensors for data collection and developments in machine learning, predictive maintenance has gotten more attention. These developments have made the
+implementation of a predictive maintenance system favorable. It is important that the cost of implementing such a system does not overcome the costs of having such a system in the first place. The PdM has evolved with these developments, from Reactive Maintenance to Preventive Maintenance and finally Predictive Maintenance. \cite{DBLP:journals/corr/abs-1912-07383} . PdM has gotten  increasing attention from industrial countries like Germany, the USA, and China with their respective projects Industry 4.0, CPS (Cyber-Physical Systems), and China 2025. These projects aim to standardize the development of a PdM system. \cite{DBLP:journals/sj/ZhangYW19}
+
+\hfill{\fontfamily{phv}\normalsize\emph{Sanjay Gupta}} \\
+In the last decade, many companies and industries have lost significant amounts of money in their business due to software or machine failure, which has led to unplanned system outages. Due to the inefficient maintenance approach, the amount of maintenance costs in the total cost of the industry is increasing \cite{DBLP:journals/sj/ZhangYW19}. In order to overcome this, we need to select an effective maintenance technique that not only reduces the time and waste caused by excessive maintenance, but also increases the life of the equipment. PdM approaches are primarily divided into the following two categories.
+\begin{enumerate}
+  \item Model-based PdM \\
+        In the Model-based approach, we assume that the \textit{past is similar to the future}, but this is not true in reality. This approach uses knowledge of the physical model and the failed system to provide an estimate of the Remaining Useful Lifetime \cite{Roemer05anoverview, Schwabacher2005}. If we want to predict the health of the system, we have to rely entirely on a dynamic model. However, the model is not always easy to obtain. These techniques use the mathematical model process to develop the physical understanding of the model into a diagnostic problem \cite{Marjanović2011}. Such models are being used to describe both the positive and negative behavior of the model in order to show the fault status in time and to make RUL estimates. The pros of this approach are that any system failure is closely related to model parameters \cite{Marjanović2011}. It is therefore possible to achieve good performance by analysing the behaviour of the process, collecting new knowledge, and applying this to the model.
+  \item Data-Driven PdM \\
+        In the Data-driven approach, we assume that \textit{Past is NOT similar to Future}. In this method, more importance is given on the data and all Machine Learning (ML) models are strongly guided by data. These techniques use the available data to train models to predict the RUL estimation. However, a model-based approach can deliver better output if a well-structured physical model is provided. But sometimes only time-series data is available to describe the operation of a machine or system. In this case, it is difficult to construct a process model, so we prefer the data-driven method over a model-based approach. According to James \cite{DBLP:phd/dnb/Kimotho16}, temperature, vibration, dynamic force, electrical current, and rotational speed are used as input data to monitor and represent machine performance. All input data is collected through sensors or Internet-of-things (IoT) devices. The complete and detailed survey of the data-driven method for PdM is described by Weiting \cite{DBLP:journals/sj/ZhangYW19}.
+\end{enumerate}
+
+In summary, the model-based method is applicable when it is possible to develop accurate mathematical models of physical systems \cite{DBLP:journals/corr/abs-1912-07383}. However, as the system becomes more complex, it is difficult and challenging to match the current trend, make frequent changes to the system, and then construct a mathematical model. On the other hand, with the continuous growth of big data, IoT devices, and a large amount of data generated by machines on a daily basis, the data-driven techniques for diagnostic, and prognostic have achieved great success. With the continuous development of ML, Deep Learning (DL), and Artificial Intelligence (AI), the data-driven method for fault diagnostics and RUL prediction has gained popularity in the PdM of industrial systems. To conclude, we will strictly follow the data-driven approach to our ML4PdM research project.
+
+\section{Formal Definition of Time Series Data}
+\vspace*{-3mm}\hfill{\fontfamily{phv}\normalsize\emph{Anurose Prakash}}
+\label{sec:intro:time-series-definition}
+
+The input to data-driven predictive maintenance systems includes one of synthetic or real-world data, raw time series data (which could be synthetic  or real-world type) or a feature representation. Our data consists of $N$ instances of multivariate time series $\{x_1, \dots, x_N \}$. Each multivariate time series $x_i$ where $i \in [N]$ is defined as:
+\begin{equation}
+  x_i = [x_{i,1},\dots, x_{i,S}]
+\end{equation}
+
+Each sensor recording $x_{i,s}$ consists of a list of measurements. Each measurement is represented by a time step ${t_{i,s}^{(j)}}$  $\in$ $\mathbb{R}_{0}$ and value ${v_{i,s}^{(j)}}$ $\in$ $V(s)$, where $j \in [\tau(i,s)]$ denotes the number of recordings of sensor $s$ for instance $i$ and $V(s)$ the domain of the corresponding values. The resulting list is ordered in an ascending manner by timestamps as ${t_{i,s}^{(j-1)}}$ < ${t_{i,s}^{(j)}}$. Formally, we have:
+\begin{equation}
+  {x_{i,s}}= \left [ \left (t_{i,s}^{(j)},v_{i,s}^{(j)}\right) \right ]_{j=1}^{\tau (i,s)}
+\end{equation}
+
+The sensors $s \in [S]$ can record at different rates, as they can either record the values at fixed intervals or record just at the time steps where the value changes.
+That results in varying length times series and furthermore results in measurements of different sensors at different time steps.\\
+To select all sensor values for a single timestep $t\in\mathbb{N}$ we define following notation:
+\begin{equation}
+  x^{(t)}_i= \left[ \left( t,v_{i,s} \right) \right]_{s=1}^{S}
+\end{equation}
+This can then also be used to select a slice of time series data starting at timestep $a\in\mathbb{N}$ and ending at timestep $b\in\mathbb{N}$:
+\begin{equation}
+  x^{(a,b)}_i= \left[ x^{(a)}_i, x^{(a+1)}_i, \ldots, x^{(b)}_i \right] \quad a\leq b
+\end{equation}
+
+\section{Structure of the Document}
+
+\label{sec:intro:structure}
+
+\hfill{\fontfamily{phv}\normalsize\emph{Paul Fährmann}} \\
+\textbf{Time Series Feature Extraction:} In this chapter, we give a structured overview of various feature extraction methods. After a formal definition in Section~\ref{sec:feature-extraction:formal-definition} of a feature vector, we split the different approaches into three domains: \textit{Time}, \textit{Frequency} and \textit{Time and Frequency}. In Subsection~\ref{sec:feature-extraction:approaches:windowing}, we also describe windowing approaches and explain in Section~\ref{sec:feature-extraction:evaluation-setup} an evaluation setup for feature extraction methods using an example.
+
+\hfill{\fontfamily{phv}\normalsize\emph{Anurose Prakash}} \\
+\textbf{Health State Classification:} This chapter deals with one of the major techniques of fault diagnosis, which is the health state classification. The chapter begins with the motivation to implement this technique, followed by the formal problem definition of its training and testing processes. The subsection datasets discuss on the popular ones that are used for the estimation of health state. Next is the feature selection section that illustrates the commonly used strategies to extract features that helps in distinguish between different health states. Furthermore, health state estimation using the supervised learning section involves six different data-driven techniques and the evaluation of these are provided in the subsequent evaluation section of the chapter.
+
+\hfill{\fontfamily{phv}\normalsize\emph{Gourav Prakash}} \\
+\textbf{Health Index Estimation:} For this part of the section, we start with the motivational section \ref{sec:hi_estimation:motivation}, which specifies the need for HI in predictive maintenance for ML. Next, we showed the work factor of HI by formal definition in section \ref{sec:hi_estimation:formal_definiton}. Section \ref{sec:hi_estimation:datasets} contains a publicly available data set that shows the historically recorded data. Followed by various approaches according to the state of the art in section \ref{sec:hi_estimation:approaches}, some approaches were discussed with which the HI can be determined to estimate the conditional state of a system. Finally, we mention the assessment section, which specifies the assessment procedure for implementing the approaches mentioned above.
+
+\hfill{\fontfamily{phv}\normalsize\emph{Vinay Kaundinya}} \\
+\textbf{Remaining Useful Lifetime Estimation} This chapter is structured as follows: section \ref{sec:rul_estimation:motivation} briefly describes the motivation of the chapter, section \ref{sec:rul_estimation:motivation:challenges} describes current challenges when dealing with RUL estimation, section \ref{sec:rul_estimation:formal_definition} provides an extended formal definition specific to RUL estimation, section \ref{sec:rul_estimation:datasets} presents an overview on the available datasets for predictive maintenance, section \ref{sec:rul_estimation:approaches} describes implementation details of state-of-the-art approaches for RUL estimation and section \ref{sec:rul_estimation:evaluation_setup} presents Symmetric and Asymmetric loss functions that are used to evaluate the performance of stated approaches.

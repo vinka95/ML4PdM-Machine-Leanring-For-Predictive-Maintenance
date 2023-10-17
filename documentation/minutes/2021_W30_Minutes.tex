@@ -1,0 +1,37 @@
+\documentclass[11pt]{meetingmins} % Using meetingmins LaTeX class.
+
+\setcommittee{Project Group: Machine Learning for Predictive Maintenance}
+
+\setdate{July 29, 2021. 10:30 - 12:50}
+
+\setpresent{Tanja Tornede\textit{(Supervisor)}, Christopher Zinda, Paul Fährmann, Sanjay Gupta, Vinay Kaundinya.}
+
+\absent{}
+
+\begin{document}
+
+\maketitle
+
+\section{Minutes-taker: Vinay Kaundinya}
+
+\section{Topics Discussed:}
+
+\subsection{Implementation}
+\subsubsection{Details}
+\begin{hiddensubitems}
+    \item Discussed dataset extension details, methods to transform TS data to list and strings to attribute types using attribute classes. Additions: Individual parse functions.
+    \item Discussed Sanjay's progress on TS fresh wrapper implementation(fixing code smells), rnn autoencoder review.
+    \item Improve tsfresh constructor implementation. Default parameters 'False', example: get set of active parameters, set contains element from enum, anything that is not in set deactivate.
+    \item Discussed asymmetric loss numbers and RMSE values for Direct RUL, CNN and LSTM approach. Additions: adapt to windowed predictor approach.
+    \item Discussed multiple classifier approach, RMSE and MSE values are as expected but not asymmetric score. Christopher to work on windowed predictor.
+    \item Discussed plan for week 31.
+    \item Discussed timeseries to numpy(and vice versa) transformation functions. Only timeseries stuff to list or numpy was discussed earlier and not transformation of all features.
+    \item Discussed to have a wrapper function for scalers.
+\end{hiddensubitems}
+
+\section{Next Meeting:}
+\begin{hiddensubitems}
+    \item Date and time: August 05, 2021 at 10:00 - 12:00
+    \item Person responsible for minutes: Paul Fährmann
+\end{hiddensubitems}
+\end{document}

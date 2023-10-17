@@ -1,0 +1,42 @@
+\documentclass[11pt]{meetingmins} % Using meetingmins LaTeX class.
+
+\setcommittee{Project Group: Machine Learning for Predictive Maintenance}
+
+\setdate{September 9, 2021. 13:00 - 14:00}
+
+\setpresent{Tanja Tornede \textit{(Supervisor)}, Christopher Zinda, Paul Fährmann, Sanjay Gupta, Vinay Kaundinya.}
+
+\absent{}
+
+\begin{document}
+
+\maketitle
+
+\section{Minutes-taker: Vinay Kaundinya}
+
+\section{Topics Discussed:}
+
+\subsection{Final phase}
+\subsubsection{Details}
+\begin{hiddensubitems}
+    \item @Paul, talks about the new structure of the presentation. Paul (with Vinay) are working on motivation for presentation.
+    \item @Paul, described the examples in the documentation. Working on describing the data format.
+    \item @Sanjay, demonstarted his changes on the ML4PdM page of the documentation, with separate sections for evaluation, parsing, prediction etc.
+    \item @Sanjay Added Tanja's details as the contributor.
+    \item @Sanjay suggests 'BSD-3 Clause' as suitable license for our library.
+    \item @Vinay finalized logo design, described acknowledgments for cmapss dataset used.
+    \item @Vinay worked with Paul, to come up with some pointers on the introduction and motivation.
+    \item @Christopher worked on his final report summary. Worked on improving the structure of the presentation(with team).
+    \item Received feedback on examples, suggested having separate folders for simple examples and for parameter tuning examples.
+    \item Change the description of installation process in documentation, "change to root folder" to a sentence that can capture more context, maybe add "...root folder of the project." or "switch to...".
+    \item Why jupyter notebook for examples? better for displaying images, graphs and can have already run models.
+    \item Add conda env to jupyter notebooks.
+    \item Include jupyter notebook cells in the examples of documentation.
+    \item @paul explained all the ideas wrt presentation.
+    \item Some pointers: standard ml - you need fixed size. diff length ts are problematic. we have methods to transform such ts, ts to ts and ts to fixed size. statistical features from ts. pyts not for statistical but for fixed size(describe all libraries in short). Characteristics of PdM.
+    \item Start with a pipeline, say for embed rul approach, here each component can be replaced with other transforming techniques. give options for each component. include one or two or three examples. make it more visual with pictures.
+    \item 3 examples, start with Direct RUL(windowing approach, sklearn regressor), then EmbedRUL(windowed predictor, HI)
+    \item Create pipeline structure blocks, general, give an idea of how some blocks are optional or can be replaced with other approaches. -- ABSTRACT structure.
+    \item later on give specific pipeline examples for the above structure.
+\end{hiddensubitems}
+\end{document}

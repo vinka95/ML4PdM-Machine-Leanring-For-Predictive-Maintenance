@@ -1,0 +1,54 @@
+\documentclass[11pt]{meetingmins} % Using meetingmins LaTeX class.
+
+\setcommittee{Project Group: Machine Learning for Predictive Maintenance}
+
+\setdate{March 31, 2021. 09:00 - 10:00}
+
+\setpresent{Tanja Tornede\textit{(Supervisor)}, Christopher Zinda, Paul Fährmann, Sanjay Gupta, Vinay Kaundinya}
+
+% \alsopresent{Alexander Tornede\textit{(Guest)}}
+
+\begin{document}
+
+\maketitle
+
+\section{Minutes-taker: Paul Fährmann}
+
+\section{Topics Discussed:}
+
+\subsection{Virtual Machine}
+\subsubsection{Details}
+\begin{hiddensubitems}
+    \item We are still waiting for IRB, this will maybe resolve until thursday evening (01.04.2021).
+    \item Will need VPN to get access.
+    \item Will need admin user rights to install and set up the required software.
+\end{hiddensubitems}
+
+\subsection{Packages and Anaconda Environment}
+\subsubsection{Details}
+\begin{hiddensubitems}
+    \item Should fix yml file (no "Sanjay" user, etc.)
+    \item The version number of the packages in the environment should be fixed
+    \item Should add more packages we discussed, like:
+    \begin{itemize}
+    	\item numpy
+    	\item pandas
+    	\item pytest
+    	\item etc.
+    \end{itemize}
+	\item Whenever a package is missing while implementation, we should add it with the version number to the yml-file on our code repository.
+\end{hiddensubitems}
+
+\subsection{Implementation}
+\subsubsection{Details}
+\begin{hiddensubitems}
+	\item Actual implementation starts now.
+	\item The 5 classes planned via Jira (Evaluator, DatasetParser + Dataset, EvaluatorConfigParser and PipelineConfigParser) should be implemented, tested and reviewed until the 14th of April.
+\end{hiddensubitems}
+
+\section{Next Meeting:}
+\begin{hiddensubitems}
+    \item Date and time: April 14, 2021 at 09:00 - 11:00
+    \item Person responsible for minutes: Sanjay Gupta
+\end{hiddensubitems}
+\end{document}

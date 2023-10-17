@@ -1,0 +1,1057 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage[sorting=none, backend=biber]{biblatex}
+\usepackage{filecontents}
+\begin{filecontents}[overwrite,nosearch]{references.bib}
+@article{DBLP:journals/corr/abs-1912-07383,
+    author    = {Yongyi Ran and
+                 Xin Zhou and
+                 Pengfeng Lin and
+                 Yonggang Wen and
+                 Ruilong Deng},
+    title     = {A Survey of Predictive Maintenance: Systems, Purposes and Approaches},
+    journal   = {CoRR},
+    volume    = {abs/1912.07383},
+    year      = {2019},
+    url       = {http://arxiv.org/abs/1912.07383},
+    archivePrefix = {arXiv},
+    eprint    = {1912.07383},
+    timestamp = {Wed, 01 Jul 2020 09:22:04 +0200},
+    biburl    = {https://dblp.org/rec/journals/corr/abs-1912-07383.bib},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{khelif2016direct,
+  title={Direct remaining useful life estimation based on support vector regression},
+  author={Khelif, Racha and Chebel-Morello, Brigitte and Malinowski, Simon and Laajili, Emna and Fnaiech, Farhat and Zerhouni, Noureddine},
+  journal={IEEE Transactions on industrial electronics},
+  volume={64},
+  number={3},
+  pages={2276--2285},
+  year={2016},
+  publisher={IEEE}
+}
+@article{DBLP:journals/sj/ZhangYW19,
+    author    = {Weiting Zhang and
+                Dong Yang and
+                Hongchao Wang},
+    title     = {Data-Driven Methods for Predictive Maintenance of Industrial Equipment:
+                {A} Survey},
+    journal   = {{IEEE} Syst. J.},
+    volume    = {13},
+    number    = {3},
+    pages     = {2213--2227},
+    year      = {2019},
+    url       = {https://doi.org/10.1109/JSYST.2019.2905565},
+    doi       = {10.1109/JSYST.2019.2905565},
+    timestamp = {Fri, 11 Sep 2020 15:01:32 +0200},
+    biburl    = {https://dblp.org/rec/journals/sj/ZhangYW19.bib},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{DBLP:journals/candie/CarvalhoSVFBA19,
+    author    = {Thyago Peres Carvalho and
+                Fabr{\'{\i}}zzio Alphonsus A. M. N. Soares and
+                Roberto Vita and
+                Roberto da Piedade Francisco and
+                Jo{\~{a}}o P. Basto and
+                Symone G. S. Alcal{\'{a}}},
+    title     = {A systematic literature review of machine learning methods applied
+                to predictive maintenance},
+    journal   = {Comput. Ind. Eng.},
+    volume    = {137},
+    year      = {2019},
+    url       = {https://doi.org/10.1016/j.cie.2019.106024},
+    doi       = {10.1016/j.cie.2019.106024},
+    timestamp = {Mon, 26 Oct 2020 08:24:22 +0100},
+    biburl    = {https://dblp.org/rec/journals/candie/CarvalhoSVFBA19.bib},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{DBLP:journals/corr/abs-1709-01073,
+    author    = {Narendhar Gugulothu and
+                Vishnu TV and
+                Pankaj Malhotra and
+                Lovekesh Vig and
+                Puneet Agarwal and
+                Gautam M. Shroff},
+    title     = {Predicting Remaining Useful Life using Time Series Embeddings based
+                on Recurrent Neural Networks},
+    journal   = {CoRR},
+    volume    = {abs/1709.01073},
+    year      = {2017},
+    url       = {http://arxiv.org/abs/1709.01073},
+    archivePrefix = {arXiv},
+    eprint    = {1709.01073},
+    timestamp = {Sun, 22 Mar 2020 17:29:03 +0100},
+    biburl    = {https://dblp.org/rec/journals/corr/abs-1709-01073.bib},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@INPROCEEDINGS{8326010,
+    author    = {V. {Mathew} and T. {Toby} and V. {Singh} and B. M. {Rao} and M. G. {Kumar}},
+    booktitle = {2017 IEEE International Conference on Circuits and Systems (ICCS)}, 
+    title     = {Prediction of Remaining Useful Lifetime (RUL) of turbofan engine using machine learning}, 
+    year      = {2017},
+    volume    = {},
+    number    = {},
+    pages     = {306-311},
+    doi       = {10.1109/ICCS1.2017.8326010}
+}
+@article{DBLP:journals/tie/KhelifCMLFZ17,
+    author    = {Racha Khelif and
+                Brigitte Chebel{-}Morello and
+                Simon Malinowski and
+                Emna Laajili and
+                Farhat Fnaiech and
+                Noureddine Zerhouni},
+    title     = {Direct Remaining Useful Life Estimation Based on Support Vector Regression},
+    journal   = {{IEEE} Trans. Ind. Electron.},
+    volume    = {64},
+    number    = {3},
+    pages     = {2276--2285},
+    year      = {2017},
+    url       = {https://doi.org/10.1109/TIE.2016.2623260},
+    doi       = {10.1109/TIE.2016.2623260},
+    timestamp = {Fri, 22 May 2020 15:34:07 +0200},
+    biburl    = {https://dblp.org/rec/journals/tie/KhelifCMLFZ17.bib},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+\end{filecontents}
+\addbibresource{references.bib}
+
+\title{Project Group:\\
+\textbf{Machine Learning for Predictive Maintenance}\\
+(Weekly Status Report)}
+
+\author{Supervisors:\\
+\textbf{Prof. Dr. Eyke H{\"u}llermeier (eyke@upb.de)}\\
+\textbf{Tanja Tornede (tanja.tornede@upb.de)}\\ 
+\vspace{10mm}
+Name: Vinay Kaundinya Ronur Prakash \\
+Matriculation Number: 6905228\\
+E-mail: vinaykaundinya95@gmail.com
+}
+\date{}
+
+% Definition of \maketitle
+\makeatletter
+\def \@maketitle{
+\begin{center}
+\includegraphics[width=10cm, height=3cm]{logo.png}\\
+{\vspace{12mm} \@title}\\[4ex]
+{\@author}\\[4ex]
+\end{center}}
+\makeatother
+
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
+\rhead{PG ML4PdM}
+\lhead{Vinay Kaundinya}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\clearpage
+\pagenumbering{arabic}
+
+% New page start here.
+\newpage
+\begin{section}*{Summary of Contributions \hfill \date{30 September, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Introduction to PdM}
+         \begin{enumerate}
+             \item Worked on design and formatting of the minutes of meeting (with Sanjay) and weekly report (with group) latex templates.
+             \item Set up parts of our instance on JIRA and in integration with Teams and GitLab. Created initial tasks and milestones on JIRA. (with Christopher)
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Topic Study \& Requirements Analysis}
+         \begin{enumerate}
+             \item Presented groups milestone 2 work plan using a Gantt chart representation.
+             \item Discussed on next steps for the writing of the chapter ”Remaining Use-ful Lifetime Estimation” and added JIRA tasks. (with Christopher).
+             \item Worked on template document for writing the survey ”Machine Learning For Predicitve Maintenance - A Short Survey”. (with group)
+             \item Wrote abstract for the topic study document.
+             \item Wrote the Introduction, Available Datasets, Evaluation Setup, Direct RUL, CNN Regressor and LSTM sections under 'Remaining Use-ful Lifetime Estimation' chapter.
+             \item Wrote parts of Conclusion chapter.
+             \item Reviewed Introduction, Time Series Feature Extraction and Conclusion chapters.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{System Design}
+         \begin{enumerate}
+             \item Discussed and created PdMFF data format. Described PdMFF data format in the system design document.
+             \item Created class diagrams for RUL approaches(Direct RUL, CNN and LSTM).
+             \item Created sequence diagrams for RUL approaches(Direct RUL, CNN and LSTM).
+             \item Described the documentation strategy of our library, with parts on documenting code and document generation.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Implementation}
+         \begin{enumerate}
+             \item Set up Sphinx document generator tool with 'Readthedocs' theme for our library.
+             \item Presented comparisons between VS code and pycharm IDEs.
+             \item Creation of datasets in PdMff format. Implemented a arff to pdmff transformers for CMAPSS and PHM 08 datasets.
+             \item Implemented Dataset class and dataset parser with methods to read a pdmff dataset, save a dataset in pdmff and to fetch cmapss datasets directly.
+             \item Implemented and tested classes for Direct RUL, CNN and LSTM based RUL approaches.
+             \item Reviewed merge requests of all the team members.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Final Presentation}
+         \begin{enumerate}
+             \item Designed the logo for library, after discussions with teammates.
+             \item Worked with the team in structuring final presentation slides.
+             \item Created slides for introduction to predictive maintenance and presenting pipeline example for direct RUL approach.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 38 \hfill \date{24 September, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Create PowerPoint slides for introduction to PdM and direct RUL approach.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 37 \hfill \date{17 September, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item Finalized logo design.
+             \item Writing acknowledgements for the cmapss and phm 08 challenge datasets.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Create PowerPoint slides for introduction to PdM and direct RUL approach.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 36 \hfill \date{10 September, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item Creating different versions of logo ideas. Finalizing on the final logo and colour.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Adding Dataset acknowledgements.
+             \item Adding conda files for MacOS
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 35 \hfill \date{3 September, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Create first version of logo.
+             \item Adding Dataset acknowledgements.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 34  \hfill \date{27 August, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item Merged final implementation of Direct RUL, LSTM RUL and CNN RUL approaches.
+             \item Fixed code smells and bugs for individual branches before merging to develop branch.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Working on final phase documentation and presentation.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 33  \hfill \date{20 August, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Finalizing code, documentation and merging to develop branch for Direct RUL and LSTM approaches.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 32  \hfill \date{13 August, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Finalizing code for Direct RUL and LSTM approaches.
+             \item Implementing dataset transformation methods for CNN and LSTM approaches.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 31  \hfill \date{06 August, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Implementing hyperparameter tuning for CNN and LSTM approaches.
+             \item Finalizing code.
+             \item Adapting windowed predictor for direct RUL and LSTM approaches.
+             \item Created new conda setup files for mac os with updated tensorflow version.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 30  \hfill \date{30 July, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Implementing hyperparameter tuning for Direct RUL, CNN and LSTM approaches.
+             \item Finalizing code and documenting it.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 29  \hfill \date{23 July, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Implementing hyperparameter tuning for Direct RUL, CNN and LSTM approaches.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 28  \hfill \date{16 July, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Implementing hyperparameter optimization for Direct RUL, CNN and LSTM approaches.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 27  \hfill \date{09 July, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Implementing Direct RUL approach (Improving score and RMSE values).
+             \item Implementing CNN approach.
+             \item Implementing LSTM approach.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 26  \hfill \date{02 July, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Implementing Direct RUL approach (Improving score and RMSE values).
+             \item Implementing CNN approach (Completed windowing method and CNN model).
+             \item Implementing LSTM approach (Implemented normalization on input and LSTM model with initial parameters).
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here. 
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 25  \hfill \date{25 June, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Testing Direct RUL approach.
+             \item Implementing CNN approach.
+             \item Implementing LSTM approach.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here. 
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 24  \hfill \date{18 June, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Testing Direct RUL approach.
+             \item Implementing CNN approach.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item Implementing Direct RUL approach.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here. 
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 23  \hfill \date{11 June, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Implementing Direct RUL approach.
+             \item Testing Direct RUL approach.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here. 
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 22  \hfill \date{04 June, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Implementing Direct RUL approach and documenting their code.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here. 
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 21  \hfill \date{28 May, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Implementing Direct RUL approach and documenting their code.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here. 
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 20  \hfill \date{21 May, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item Improved test coverage for dataset parser.
+             \item Merged feature/dataset-parser branch on to develop branch. \href{https://git.cs.uni-paderborn.de/machine-learning-for-predictive-maintenance/code/-/merge_requests/16}{!16}
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Implementing Direct RUL approach and documenting their code.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here. 
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 19  \hfill \date{14 May, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item Implemented test scripts for get\_cmapss\_data static method along with methods parse\_from\_file and save\_to\_file methods.
+             \item Updated docstrings with relevant explanations for all the methods that are implemented.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Implementing further classes for RUL approaches and documenting their code.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here. 
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 18  \hfill \date{07 May, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item Implemented get\_cmapss\_data static method, that will allow users to get the CMAPSS data in PDMFF, based on the two parameters passed to the method.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Implementing Test script for get\_cmapss\_data static method.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here. 
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 17  \hfill \date{30 April, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item Implemented the timeseries representation for sensors in PDMFF for CMAPSS dataset, where each sensor was considered as timeseries attribute, which was NUMERIC attribute earlier.
+             \item Implemented first version of RUL and HI abstract classes in a feature branch and discussed with Christopher for further additions.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Implementing a static method to get cmapss dataset.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here. 
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 16  \hfill \date{23 April, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item Implemented Dataset class and Dataset Parser with methods to parse from a PDMFF file and save a dataset object in file.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Implementing RUL and HI abstract classes in a feature branch.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here. 
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 15  \hfill \date{16 April, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item Implementation of parts of the dataset parser.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Challenges}
+         \begin{enumerate}
+             \item In parsing for attributes of type nested TIMESERIES.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Implementing dataset parser.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here. 
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 14  \hfill \date{09 April, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item Correcting dependencies and setting up conda environment.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Implementing dataset parser.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here. 
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 13  \hfill \date{02 April, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item Installing Sphinx document generator for our code repository.
+             \item Configuring VS code and anaconda environment with correct dependencies.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Developing dataset and dataset parser classes.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here. 
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 12  \hfill \date{26 March, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item Added documentation for sequence and class diagrams for RUL approaches to system design document.
+             \item Created a documentation strategy and added contents for it in the system design document.
+             \item Discussed advantages and disadvantages of different python IDE (pycharm and VS Code).
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Installing Sphinx document generator for our code repository.
+             \item Configuring VS code and anaconda environment with correct dependencies.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here. 
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 11  \hfill \date{19 March, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item Finalized sequence and class diagrams for RUL approaches.
+             \item Discussed the plan for the quality assurance chapter of system design document and assigned tasks with the team.
+             \item Reviewed pydoc documentation strategy.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item Describing the documentation strategy and including it in the document.
+             \item Finishing the classes and sequence diagrams for RUL approaches with descriptions.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.            
+
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 10  \hfill \date{12 March, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item
+                   Improved class diagrams for the three RUL approaches with method names for classes.
+                   elements.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item
+                   Applying changes to sequence diagrams as discussed in the weekly team meeting.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 09  \hfill \date{05 March, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item
+                   Described the latest data format(PDMFF) as part of system design.
+             \item
+                   Worked with the team to come up with a more accurate and detailed class diagrams with all pipeline elements.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item
+                   Working on individual RUL approaches in extending their parameters and functions in the class diagram.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 08  \hfill \date{26 February, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item
+                   Discussed and came up with a new version for the data format, such that all types of datasets are represented (with Paul and Selami).
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item
+                   Describing the latest version of data format as part of system design.
+             \item
+                   Reviewing interface diagrams.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 07  \hfill \date{19 February, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item
+                   Drafted abstract for the topic study report.
+             \item
+                   Reviewed HI chapter of Topic study report.
+             \item
+                   Implemented changes according to 2nd review for RUL chapter.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item
+                   Describing and improving the data format as part of system design.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 06  \hfill \date{12 February, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item
+                   Implemented feedback for RUL estimation chapter of topic study report.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item
+                   Writing abstract for the topic study report.
+             \item
+                   Reviewing HI chapter of Topic study report.
+
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 05  \hfill \date{5 February, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item
+                   Reviewing Time Series Feature Extraction chapter of Topic study report.
+             \item
+                   Reviewing Introduction chapter of Topic study report.
+             \item
+                   Reviewing Conclusion chapter of Topic study report.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item
+                   Implementing feedback for Remaining Useful Lifetime Estimation chapter of Topic study report.
+             \item
+                   Writing abstract for the Topic study report.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 04  \hfill \date{29 January, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item
+                   Reviewing Time Series Feature Extraction chapter of Topic study report.
+             \item
+                   Reviewing Introduction chapter of Topic study report.
+             \item
+                   Reviewing Conclusion chapter of Topic study report.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 03  \hfill \date{22 January, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item
+                   Described the LSTM approach as part of the topic study.
+             \item
+                   Described structure of the RUL chapter as part of the Introduction chapter.
+             \item
+                   Discussed the git workflow with the team and came up with conventions for standard operations.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item
+                   Reviewing RUL chapter and adding more information to the report.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 02  \hfill \date{15 January, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item
+                   Described the CNN approach as part of the topic study.
+             \item
+                   Discussed with the team to come up with points to be added for the Conclusion chapter.
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item
+                   Working on RVR of 'State of the art Approaches' section for RUL estimation.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 01  \hfill \date{8 January, 2021}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item
+                   Working on Direct RUL approach of 'State of the art Approaches' section for RUL estimation. Currently at explaining 4 different stages of its implementation. \cite{khelif2016direct}
+         \end{enumerate}
+     \end{subsection}
+     \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 52 and 53 \hfill \date{30 December, 2020}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item
+                   Worked on the first draft of 'Available Datasets' section in the 'Topic Study' report.
+         \end{enumerate}
+     \end{subsection}
+
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item
+                   Started on Direct RUL approach of 'State of the art Approaches' section for RUL estimation.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 51 \hfill \date{18 December, 2020}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item
+                   Presented the team's work plan for Milestone 2 using a Gantt chart.
+             \item
+                   Thoroughly understood and helped in formulating the formal definition for Time series. (with Team)
+         \end{enumerate}
+     \end{subsection}
+
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item
+                   Writing the 'Available Datasets' section for RUL estimation.
+         \end{enumerate}
+     \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 50 \hfill \date{11 December, 2020}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item
+                   Going through seed papers \cite{DBLP:journals/corr/abs-1709-01073}, \cite{8326010} and \cite{DBLP:journals/tie/KhelifCMLFZ17} for the estimation of Remaining Useful Lifetime has helped me understand different approaches for achieving the same. The papers talk about RUL estimation based on sensor data that make assumptions about how machines degrade using datasets such as CMAPSS, Turbo fan dataset by NASA and others. Papers give an idea on how these approaches can tackle some of the challenges like noisy sensor readings, unavailability of sensor data and temporal dependencies between them. Comparison between different data driven approaches were discussed to separate approaches: Embed-RUL and Direct RUL estimation as the better ones. Different evaluation metrics such as MSE, MAPE, Score, Performance were considered in comparing the approaches.
+             \item
+                   Defining formal definition for Time Series and structuring Introduction chapter of the survey was done along with the team.
+             \item
+                   Came up with a plan for writing the chapter on Remaining Useful Estimation in the survey. (with Christopher)
+         \end{enumerate}
+     \end{subsection}
+     \begin{subsection}*{Challenges}
+         \begin{enumerate}
+             \item
+                   Defining formal definition for Time series.
+         \end{enumerate}
+     \end{subsection}
+
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item
+                   Writing the 'Available Datasets' section for RUL estimation.
+         \end{enumerate}
+     \end{subsection}
+
+     \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 49 \hfill \date{4 December, 2020}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item
+                   The research survey paper \cite{DBLP:journals/candie/CarvalhoSVFBA19} summarizes the application of RF, ANN, SVM (also SVR) and K-means in the field of PdM. It proposes and uses a literature review planning protocol for the papers on PdM. It also meta-analyses these papers (e.g. citation and methods analysis, distribution along the years).
+             \item
+                   Worked with the group in adapting template document for writing the survey ”Machine Learning For Predicitve Maintenance - A Short Survey”.
+             \item
+                   Discussed on next steps for the writing of the chapter ”Remaining Use-ful Lifetime Estimation” and added JIRA tasks. (with Christopher)
+         \end{enumerate}
+     \end{subsection}
+     \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 48 \hfill \date{27 November, 2020}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item
+                   The research survey paper \cite{DBLP:journals/sj/ZhangYW19} is more inclined towards industrial equipment. It began with a brief introduc- tion to the PDM, the intent of the PDM, and data-driven methods. In this paper, the authors examine the industrial applications of the last five years and how the industry is trying to use PdM in an accurate and efficient manner. The challenges, advantages, and disadvantages of the different ML and DL application scenarios are also described in detail. \cite{survey1}.
+         \end{enumerate}
+     \end{subsection}
+
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item
+                   Started study on ”A systematic literature review of machine learning methods applied to predictive maintenance” \cite{DBLP:journals/candie/CarvalhoSVFBA19}.
+         \end{enumerate}
+     \end{subsection}
+     \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 47 \hfill \date{20 November, 2020}}
+ \begin{refsection}
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item
+                   My understanding on PdM is extended after starting my study on paper 2. I am at understanding the performance metrics and their comparison for each type of classification. I am able to easily grasp the contents in the paper ’Data-Driven Methods for Predictive Maintenance of Industrial Equipment: A Survey’ \cite{DBLP:journals/sj/ZhangYW19}.
+         \end{enumerate}
+     \end{subsection}
+     \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 46 \hfill \date{13 November, 2020}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item Study on 'Survey of Predictive Maintenance: Systems, Purposes and Approaches' is centered around building up a PdM system that is based on different architectures, purposes and approaches. Survey talks about 3 Architectures Open System Architecture for Condition Based Monitoring, Cloud enhanced PdM frameworks and PdM 4.0. Some of the purposes like Cost minimization and unwavering quality/accessibility expansion were discussed in the paper. Survey also talks about different PdM approaches like knowledge based, machine learning based and Deep learning based methods \cite{DBLP:journals/corr/abs-1912-07383}.
+         \end{enumerate}
+     \end{subsection}
+
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item
+                   Started study on ’Data-Driven Methods for Predictive Maintenance of Industrial Equipment: A Survey’ \cite{DBLP:journals/sj/ZhangYW19}.
+         \end{enumerate}
+     \end{subsection}
+     \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 45 \hfill \date{06 November, 2020}}
+ \begin{refsection}
+     \begin{subsection}*{Completed Tasks}
+         \begin{enumerate}
+             \item
+                   I helped in the design and formatting of the Minutes and Weekly report on latex. I used the same template to record our meeting on 4th Nov and uploaded the same on GitLab.
+             \item
+                   Along with Christopher, I set up parts of our instance on Jira and in integration with Teams and GitLab.
+         \end{enumerate}
+     \end{subsection}
+
+     \begin{subsection}*{Challenges}
+         \begin{enumerate}
+             \item
+                   Initial integration with GitLab took some time.
+         \end{enumerate}
+     \end{subsection}
+
+     \begin{subsection}*{Tasks in-progress}
+         \begin{enumerate}
+             \item
+                   My study in understanding different PdM systems and architecture from the paper on ’Survey of Predictive Maintenance: Systems,Purposes and Approaches’\cite{DBLP:journals/corr/abs-1912-07383}.
+         \end{enumerate}
+     \end{subsection}
+     \printbibliography
+ \end{refsection}
+\end{section}
+% Page end here.
+
+\end{document}

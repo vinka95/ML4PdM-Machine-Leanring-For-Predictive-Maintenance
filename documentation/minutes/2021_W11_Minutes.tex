@@ -1,0 +1,96 @@
+\documentclass[11pt]{meetingmins} % Using meetingmins LaTeX class.
+
+\setcommittee{Project Group: Machine Learning for Predictive Maintenance}
+
+\setdate{March 17, 2021. 09:00 - 12:00}
+
+\setpresent{Tanja Tornede\textit{(Supervisor)}, Christopher Zinda, Paul Fährmann, Sanjay Gupta, Selami Hoxha, Vinay Kaundinya}
+
+% \alsopresent{Alexander Tornede\textit{(Guest)}}
+
+\begin{document}
+
+\maketitle
+
+\section{Minutes-taker: Vinay Kaundinya}
+
+\section{Topics Discussed:}
+
+\subsection{General Class Diagram}
+\subsubsection{Details}
+\begin{hiddensubitems}
+    \item Selami presented once again the idea on the design of the general class diagram and pointed
+    out the changes from last week.
+    \item Paul explained the difference in transformer and fixed size feature type. Did we decide on the type of input for transformer types? We remove all extra classes.
+    \item Evaluator methods renamed.'eval model or eval splitter' changed to 'dataset splitter'.
+    \item Object variable and how it is used.
+    \item Change data structure in make pipeline to be an array for the two configs.
+    \item What is expected and predicted value. Have the same ordering for metrics, <ground truth, predicted> suggested ordering. Always have the same order.
+\end{hiddensubitems}
+
+\subsection{General Sequence Diagram}
+\subsubsection{Details}
+\begin{hiddensubitems}
+    \item In the second loop, average over all the metrics.
+    \item Currently it looks like only the last evaluation result is given.
+    \item Collection of results needs to be specified.
+    \item Move splitter left or right off evaluator. show that splitter is used by evaluator by having a small arrow. without much detail.
+    \item We want to have parsers as static, shift the boxes together or use constructor to initiate parsers.
+\end{hiddensubitems}
+\subsubsection{Aditional Information}
+\begin{hiddensubitems}
+    \item People involved: Tanja Tornede and Team.
+\end{hiddensubitems}
+
+\subsection{TFE}
+\subsubsection{Details}
+\begin{hiddensubitems}
+    \item TFE, class diagram, described by Sanjay.
+    \item Often only univariate timeseries is considered, they usually assume different instances are of the same length, need to work on this more during implementation.
+    \item Change structure of TFE class diagrams in draw.io file.
+    \item Long arrows in the seq diagrams. Different styles in current seq diagrams, maintain consistency.
+    \item Include user in the seq diagrams, to get more context, instead of arrows originating from nothing.
+    \item Use constructors to represent a new class.
+    \item pyts is mostly for univariate classes, might need uni to multi variate transformer.
+    \item One for pyts, one for TSFresh, one for autoencoder and one for windowing. Exclude all other diagrams. Needed only for wrappers
+    \item new construct arrows are missing for tensorflow and sklearn methods. Move blue boxes to bottom, as discussed already.
+\end{hiddensubitems}
+\subsubsection{Aditional Information}
+\begin{hiddensubitems}
+    \item People involved: Tanja Tornede and Team.
+\end{hiddensubitems}
+
+\subsection{HIE}
+\subsubsection{Details}
+\begin{hiddensubitems}
+    \item Change the arrangement of class diagram boxes, free the overlapping arrows, have reasonable height and width.
+    \item In LSTM Autoencoder box, multiple lstm units param used in the method train-encoder-decoder()
+    \item In HGRUN, why need feature extractor in HGRUNN, if we already have the required features.
+    \item Check how TS is used in StandardScaler.
+    \item Selami, to list the steps for fitting and predicting in case of LSTMAutoencoder.
+    \item Predict methods for all approaches to be worked upon.
+    \item Add constructor classes.
+\end{hiddensubitems}
+\subsubsection{Aditional Information}
+\begin{hiddensubitems}
+    \item People involved: Tanja Tornede and Team.
+\end{hiddensubitems}
+
+\subsection{RUL}
+\subsubsection{Details}
+\begin{hiddensubitems}
+    \item Fit and transform to be used on all blue boxes(tensorflow, sklearn stuff).
+    \item Random forest class should be an ensemble. Add multi classifier approach as subclass.
+    \item Direct RUL and CNN to have an abstract box, that would allow user to choose only SVR or CNN to that of the approach from seed papers.
+\end{hiddensubitems}
+\subsubsection{Aditional Information}
+\begin{hiddensubitems}
+    \item People involved: Tanja Tornede and Team.
+\end{hiddensubitems}
+
+\section{Next Meeting:}
+\begin{hiddensubitems}
+    \item Date and time: March 24, 2021 at 09:00 - 11:00
+    \item Person responsible for minutes: Christopher Zinda
+\end{hiddensubitems}
+\end{document}

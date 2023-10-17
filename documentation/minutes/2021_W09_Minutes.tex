@@ -1,0 +1,72 @@
+\documentclass[11pt]{meetingmins} % Using meetingmins LaTeX class.
+
+\setcommittee{Project Group: Machine Learning for Predictive Maintenance}
+
+\setdate{March 03, 2020. 09:00 - 12:00}
+
+\setpresent{Tanja Tornede\textit{(Supervisor)}, Christopher Zinda, Paul Fährmann, Sanjay Gupta, Selami Hoxha, Vinay Kaundinya}
+
+\alsopresent{}
+
+\begin{document}
+
+\maketitle
+
+\section{Minutes-taker: Sanjay Gupta}
+
+\section{Topics Discussed:}
+
+\subsection{Demonstration of the general Class diagram.}
+    \subsubsection{Details}
+        \begin{hiddensubitems}
+			\item @Christopher demonstrated the Class diagram which is designed by the team members in draw.io.
+            \item Abstract class TransformerPipelineElement should be blue box.
+            \item Why do we need PredictorPipelineElement as an abstract class?
+            \item Health Index approach moves to the PredictorPipelineElement.
+			\item Update TransformerPipelineElement abstract class to sklearn.base.TransformerMixin abstract class.
+			\item Update PredictorPipelineElement abstract class to sklearn.base.RegressorMixin abstract class.
+			\item Two types of pipeline elements may be required: – 1) Feature Extractor 2) Learner or model.
+			\item RUL and HI assume data on time series are provided. So make.pipeline(RUL(), HI()).
+			\item @Tanja's Introduce two approaches, i.e. A and B, to the team, their differences, and the design of a rough sketch for all the elements required by each approach in the RUL, HI chapters.
+			\item EvaluationMetrics class should not be extending sklearn.base.BaseEstimator class.
+			\item Design clear distinct structure for metrics, pipeline, interfaces, and etc.
+			\item Add the relationship between floating classes, i.e. DatasetParser, EvaluationConfigParser.
+			\item Create flowchart workflow from class diagram and sequence diagram.
+        \end{hiddensubitems}
+	\subsubsection{Aditional Information}
+		\begin{hiddensubitems}
+			\item People involved: Tanja Tornede and Team.
+		\end{hiddensubitems}
+
+\subsection{Demonstration of the Data Format chapter.}
+	\subsubsection{Details}
+		\begin{hiddensubitems}
+			\item In the data format chapter, add Example for Health Index.
+			\item Add the title to the table as Categorical Data.
+			\item Update Target data types as numeric only.
+			\item Update the structure of the table on page 05 as discussed at the meeting.
+			\item Add "ToDo" packages instead of random text in the document. 
+		\end{hiddensubitems}
+	\subsubsection{Aditional Information}
+		\begin{hiddensubitems}
+			\item People involved: Tanja Tornede and Team.
+		\end{hiddensubitems}
+
+\subsection{Planned for next week.}
+    \subsubsection{Details}
+        \begin{hiddensubitems}
+            \item Meeting with class diagram team to refactor the class and sequence diagram.
+			\item Update the system design chapter so that the class diagram can be clearly visible without zooming the page. 
+        \end{hiddensubitems}
+    \subsubsection{Aditional Information}
+    	\begin{hiddensubitems}
+  		 	\item People involved: Tanja Tornede and Team
+  		\end{hiddensubitems}    
+    
+\section{Next Meeting:}
+    \begin{hiddensubitems}
+        \item Date and time: March 10, 2021 at 09:00 - 11:00
+        \item Person responsible for minutes: Selami Hoxha
+    \end{hiddensubitems}
+
+\end{document}

@@ -1,0 +1,100 @@
+\documentclass[11pt]{meetingmins} % Using meetingmins LaTeX class.
+
+\setcommittee{Project Group: Machine Learning for Predictive Maintenance}
+
+\setdate{March 10, 2021. 09:00 - 12:00}
+
+\setpresent{Tanja Tornede\textit{(Supervisor)}, Christopher Zinda, Paul Fährmann, Sanjay Gupta, Selami Hoxha, Vinay Kaundinya}
+
+\alsopresent{Alexander Tornede\textit{(Guest)}}
+
+\begin{document}
+
+\maketitle
+
+\section{Minutes-taker: Selami Hoxha}
+
+\section{Topics Discussed:}
+
+\subsection{General Class Diagram}
+\subsubsection{Details}
+\begin{hiddensubitems}
+	\item Christopher presented once again the idea on the design of the general class diagram and pointed
+	out the changes from last week.
+	\item The diagram was described as closer to the goal but there was an issue with the RUL separation
+	into Direct RUL and tabular since it would not support every pipeline.
+	\item A general remark for rul team given by Tanja was to think of generalizing the use of regressor
+	in SVR to use a general regressor.
+	\item We discussed the possibility of having HI estimation as a feature extractor in the class diagram
+	to make building pipelines easier.
+	\item The fit and predict that appears in every class should be removed since they return the same
+	thing in every case
+	\item Can we have multiple feature extraction with make\_union? The reasoning was that we expect it to
+	work since we extend transformer mixin. Alexander suggested that we make a class that has a list of
+	feature extraction methods as an array and then implement make\_union.
+	\item We consider to handle the error in the pipeline. If the elements in the pipeline don't fit then
+	the error will be thrown from the pipeline. We do not use the HI for example anymore in RUL as a class
+	but we assume that there was some call that calculates HI in the pipeline.
+	\item Alexander suggested to make sure that the pipeline elements are interchangeable, we can think that our framework will be able to be used by three kinds of users: a user that is not interested
+	about having everything setup and just put in the dataset to get the result, a intermediate user
+	that does not want to create the whole pipeline in its own but still wants to be able to make changes,
+	and a user that is able to use our framework elements when creating its own pipeline with
+	make\_pipeline for example.
+\end{hiddensubitems}
+\subsubsection{Aditional Information}
+\begin{hiddensubitems}
+	\item People involved: Tanja Tornede and Team.
+\end{hiddensubitems}
+
+\subsection{General Sequence Diagram}
+\subsubsection{Details}
+\begin{hiddensubitems}
+	\item Make sure that everything is renamed from "approach" to predictor.
+	\item We need to include dataset operations that are needed to be able to evaluate the approaches.
+	\item In the general sequence without configuration Evaluator parameters should be fixed.
+	\item In the sequence diagram with configuration we should make it possible to have a fixed dataset and test different approaches.
+	\item If we want the config file to be created per hand, we need to have a clear separation between configuration and serialization. At the moment it seems they are interleaved.
+	\item How do we define a pipeline in config file?
+	The idea given is to use a string representation of the whole pipeline with
+	all the methods and parameters. Another way we could represent the configuration
+	file is to use JSON notation.
+\end{hiddensubitems}
+\subsubsection{Aditional Information}
+\begin{hiddensubitems}
+	\item People involved: Tanja Tornede and Team.
+\end{hiddensubitems}
+
+\subsection{Individual Class Diagrams}
+\subsubsection{Details}
+\begin{hiddensubitems}
+	\item RandomForestApproach in RUL class diagram can be replaced in the tabular case by replacing the regressor with the sckit-learn implementation of sckit-learn.
+	\item Also Ensembles are implemented by sckit-learn. The use of this implementation should be
+	considered.
+	\item Feature extraction team should use the same notation for packages.
+	\item Feature extraction team should consider using tensorflow for the implementation for Learning
+	with neural networks.
+	\item HI class diagram should use packages instead of specific classes from libraries.
+\end{hiddensubitems}
+\subsubsection{Aditional Information}
+\begin{hiddensubitems}
+	\item People involved: Tanja Tornede and Team
+\end{hiddensubitems}
+
+\subsection{Individual Sequence Diagrams}
+\subsubsection{Details}
+\begin{hiddensubitems}
+	\item The sequence diagrams have all the problem of initializing the class.
+	\item The HI sequence diagram should separate the calls for fit and predict and fix the self calls.
+\end{hiddensubitems}
+\subsubsection{Aditional Information}
+\begin{hiddensubitems}
+	\item People involved: Tanja Tornede and Team
+\end{hiddensubitems}
+
+\section{Next Meeting:}
+\begin{hiddensubitems}
+	\item Date and time: March 17, 2021 at 09:00 - 11:00
+	\item Person responsible for minutes: Vinay Kaundinya
+\end{hiddensubitems}
+
+\end{document}

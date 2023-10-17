@@ -1,0 +1,186 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage[sorting=none, backend=biber]{biblatex}
+\begin{filecontents}[overwrite,nosearch]{references.bib}
+@article{DBLP:journals/corr/abs-1912-07383,
+    author    = {Yongyi Ran and
+                 Xin Zhou and
+                 Pengfeng Lin and
+                 Yonggang Wen and
+                 Ruilong Deng},
+    title     = {A Survey of Predictive Maintenance: Systems, Purposes and Approaches},
+    journal   = {CoRR},
+    volume    = {abs/1912.07383},
+    year      = {2019},
+    url       = {http://arxiv.org/abs/1912.07383},
+    archivePrefix = {arXiv},
+    eprint    = {1912.07383},
+    timestamp = {Wed, 01 Jul 2020 09:22:04 +0200},
+    biburl    = {https://dblp.org/rec/journals/corr/abs-1912-07383.bib},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{DBLP:journals/sj/ZhangYW19,
+    author    = {Weiting Zhang and
+                Dong Yang and
+                Hongchao Wang},
+    title     = {Data-Driven Methods for Predictive Maintenance of Industrial Equipment:
+                {A} Survey},
+    journal   = {{IEEE} Syst. J.},
+    volume    = {13},
+    number    = {3},
+    pages     = {2213--2227},
+    year      = {2019},
+    url       = {https://doi.org/10.1109/JSYST.2019.2905565},
+    doi       = {10.1109/JSYST.2019.2905565},
+    timestamp = {Fri, 11 Sep 2020 15:01:32 +0200},
+    biburl    = {https://dblp.org/rec/journals/sj/ZhangYW19.bib},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{DBLP:journals/candie/CarvalhoSVFBA19,
+    author    = {Thyago Peres Carvalho and
+                Fabr{\'{\i}}zzio Alphonsus A. M. N. Soares and
+                Roberto Vita and
+                Roberto da Piedade Francisco and
+                Jo{\~{a}}o P. Basto and
+                Symone G. S. Alcal{\'{a}}},
+    title     = {A systematic literature review of machine learning methods applied
+                to predictive maintenance},
+    journal   = {Comput. Ind. Eng.},
+    volume    = {137},
+    year      = {2019},
+    url       = {https://doi.org/10.1016/j.cie.2019.106024},
+    doi       = {10.1016/j.cie.2019.106024},
+    timestamp = {Mon, 26 Oct 2020 08:24:22 +0100},
+    biburl    = {https://dblp.org/rec/journals/candie/CarvalhoSVFBA19.bib},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+\end{filecontents}
+\addbibresource{references.bib}
+
+\title{Project Group:\\
+\textbf{Machine Learning for Predictive Maintenance}\\
+(Weekly Status Report)}
+
+\author{Supervisors:\\
+\textbf{Prof. Dr. Eyke H{\"u}llermeier (eyke@upb.de)}\\
+\textbf{Tanja Tornede (tanja.tornede@upb.de)}\\ 
+\vspace{10mm}
+Name: StudentName \\
+Matriculation Number: StudentMatriculationNumber\\
+E-mail: StudentEmailID
+}
+\date{}
+
+% Definition of \maketitle
+\makeatletter
+\def \@maketitle{
+\begin{center}
+\includegraphics[width=10cm, height=3cm]{logo.png}\\
+{\vspace{12mm} \@title}\\[4ex]
+{\@author}\\[4ex]
+\end{center}}
+\makeatother
+
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
+\rhead{PG ML4PdM}
+\lhead{StudentName}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\clearpage
+\pagenumbering{arabic}
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 46 \hfill \date{13 November, 2020}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item
+                         Your contents goes here.
+                   \item
+                         Your contents goes here.
+                   \item
+                         Your contents goes here.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Challenges}
+             \begin{enumerate}
+                   \item
+                         Your contents goes here.
+                   \item
+                         Your contents goes here.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item
+                         Your contents goes here. example references \cite{DBLP:journals/sj/ZhangYW19}.
+                   \item
+                         Your contents goes here.
+                   \item
+                         Your contents goes here.
+                   \item
+                         Your contents goes here.
+             \end{enumerate}
+       \end{subsection}
+
+       \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 45 \hfill \date{06 November, 2020}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item
+                         Your contents goes here.
+                   \item
+                         Your contents goes here.
+                   \item
+                         Your contents goes here.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Challenges}
+             \begin{enumerate}
+                   \item
+                         Your contents goes here.
+                   \item
+                         Your contents goes here.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item
+                         Your contents goes here. example references \cite{DBLP:journals/corr/abs-1912-07383,DBLP:journals/candie/CarvalhoSVFBA19}.
+                   \item
+                         Your contents goes here.
+                   \item
+                         Your contents goes here.
+                   \item
+                         Your contents goes here.
+             \end{enumerate}
+       \end{subsection}
+
+       \printbibliography
+ \end{refsection}
+\end{section}
+% Page end here.
+
+\end{document}

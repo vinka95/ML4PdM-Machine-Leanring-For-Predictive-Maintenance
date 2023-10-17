@@ -1,0 +1,848 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage[sorting=none, backend=biber]{biblatex}
+\usepackage{filecontents}
+\begin{filecontents}[overwrite,nosearch]{references.bib}
+@article{DBLP:journals/corr/abs-1912-07383,
+    author    = {Yongyi Ran and
+                 Xin Zhou and
+                 Pengfeng Lin and
+                 Yonggang Wen and
+                 Ruilong Deng},
+    title     = {A Survey of Predictive Maintenance: Systems, Purposes and Approaches},
+    journal   = {CoRR},
+    volume    = {abs/1912.07383},
+    year      = {2019},
+    url       = {http://arxiv.org/abs/1912.07383},
+    archivePrefix = {arXiv},
+    eprint    = {1912.07383},
+    timestamp = {Wed, 01 Jul 2020 09:22:04 +0200},
+    biburl    = {https://dblp.org/rec/journals/corr/abs-1912-07383.bib},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+%
+@article{DBLP:journals/sj/ZhangYW19,
+    author    = {Weiting Zhang and
+                Dong Yang and
+                Hongchao Wang},
+    title     = {Data-Driven Methods for Predictive Maintenance of Industrial Equipment:
+                {A} Survey},
+    journal   = {{IEEE} Syst. J.},
+    volume    = {13},
+    number    = {3},
+    pages     = {2213--2227},
+    year      = {2019},
+    url       = {https://doi.org/10.1109/JSYST.2019.2905565},
+    doi       = {10.1109/JSYST.2019.2905565},
+    timestamp = {Fri, 11 Sep 2020 15:01:32 +0200},
+    biburl    = {https://dblp.org/rec/journals/sj/ZhangYW19.bib},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+%
+@article{DBLP:journals/candie/CarvalhoSVFBA19,
+    author    = {Thyago Peres Carvalho and
+                Fabr{\'{\i}}zzio Alphonsus A. M. N. Soares and
+                Roberto Vita and
+                Roberto da Piedade Francisco and
+                Jo{\~{a}}o P. Basto and
+                Symone G. S. Alcal{\'{a}}},
+    title     = {A systematic literature review of machine learning methods applied
+                to predictive maintenance},
+    journal   = {Comput. Ind. Eng.},
+    volume    = {137},
+    year      = {2019},
+    url       = {https://doi.org/10.1016/j.cie.2019.106024},
+    doi       = {10.1016/j.cie.2019.106024},
+    timestamp = {Mon, 26 Oct 2020 08:24:22 +0100},
+    biburl    = {https://dblp.org/rec/journals/candie/CarvalhoSVFBA19.bib},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+%
+@article{survey5,
+author = {Riaz, Saleem and Elahi, Hassan and Javaid, Kashif and Shahzad, Tufail},
+year = {2017},
+month = {03},
+pages = {103-110},
+title = {Vibration Feature Extraction and Analysis for Fault Diagnosis of Rotating Machinery-A Literature Survey},
+volume = {5},
+journal = {Asia Pacific Journal of Multidisciplinary Research}
+}
+%
+@ARTICLE{8097036,  
+author={M. {Islam} and G. {Lee} and S. N. {Hettiwatte} and K. {Williams}},  
+journal={IEEE Transactions on Power Delivery},   
+title={Calculating a Health Index for Power Transformers Using a Subsystem-Based GRNN Approach},   
+year={2018},  
+volume={33},  
+number={4},  
+pages={1903-1912},  
+doi={10.1109/TPWRD.2017.2770166}}
+%
+@ARTICLE{7377088,  
+author={F. {Yang} and M. S. {Habibullah} and T. {Zhang} and Z. {Xu} and P. {Lim} and S. {Nadarajan}},  
+journal={IEEE Transactions on Industrial Electronics},   
+title={Health Index-Based Prognostics for Remaining Useful Life Predictions in Electrical Machines},   
+year={2016},  
+volume={63},  
+number={4},  
+pages={2633-2644},  
+doi={10.1109/TIE.2016.2515054}}
+%
+@misc{malhotra2016multisensor,
+      title={Multi-Sensor Prognostics using an Unsupervised Health Index based on LSTM Encoder-Decoder}, 
+      author={Pankaj Malhotra and Vishnu TV and Anusha Ramakrishnan and Gaurangi Anand and Lovekesh Vig and Puneet Agarwal and Gautam Shroff},
+      year={2016},
+      eprint={1608.06154},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+@misc{kimotoprog,
+      title={Multi-Sensor Prognostics using an Unsupervised Health Index based on LSTM Encoder-Decoder}, 
+      author={Pankaj Malhotra and Vishnu TV and Anusha Ramakrishnan and Gaurangi Anand and Lovekesh Vig and Puneet Agarwal and Gautam Shroff},
+      year={2016},
+      eprint={1608.06154},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+@ARTICLE{jkkimothoprog,  
+author={J.K. {Kimotho}},
+journal = {Ph.D. dissertation},
+title={Development and performance evaluation of prognostic approaches for technical systems},   
+year={2016}
+}
+@ARTICLE{6518966,
+  author={A. D. {Ashkezari} and H. {Ma} and T. K. {Saha} and C. {Ekanayake}},
+  journal={IEEE Transactions on Dielectrics and Electrical Insulation}, 
+  title={Application of fuzzy support vector machine for determining the health index of the insulation system of in-service power transformers}, 
+  year={2013},
+  volume={20},
+  number={3},
+  pages={965-973},
+  doi={10.1109/TDEI.2013.6518966}}
+
+  @inproceedings{DBLP:conf/indin/AremuOHM19,
+  author    = {Oluseun Omotola Aremu and
+               Darren O. O'Reilly and
+               David Hyland{-}Wood and
+               Peter Ross McAree},
+  title     = {Kullback-Leibler Divergence Constructed Health Indicator for Data-Driven
+               Predictive Maintenance of Multi-Sensor Systems},
+  booktitle = {17th {IEEE} International Conference on Industrial Informatics, {INDIN}
+               2019, Helsinki, Finland, July 22-25, 2019},
+  pages     = {1315--1320},
+  publisher = {{IEEE}},
+  year      = {2019},
+  url       = {https://doi.org/10.1109/INDIN41052.2019.8972069},
+  doi       = {10.1109/INDIN41052.2019.8972069},
+  timestamp = {Fri, 27 Mar 2020 08:58:39 +0100},
+  biburl    = {https://dblp.org/rec/conf/indin/AremuOHM19.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+\end{filecontents}
+\addbibresource{references.bib}
+
+\title{Project Group:\\
+\textbf{Machine Learning for Predictive Maintenance}\\
+(Weekly Status Report)}
+
+\author{Supervisors:\\
+\textbf{Prof. Dr. Eyke H{\"u}llermeier (eyke@upb.de)}\\
+\textbf{Tanja Tornede (tanja.tornede@upb.de)}\\ 
+\vspace{10mm}
+Name: Selami Hoxha \\
+Matriculation Number: 6853870\\
+E-mail: shoxha@mail.uni-paderborn.de
+}
+\date{}
+
+% Definition of \maketitle
+\makeatletter
+\def \@maketitle{
+\begin{center}
+\includegraphics[width=10cm, height=3cm]{logo.png}\\
+{\vspace{12mm} \@title}\\[4ex]
+{\@author}\\[4ex]
+\end{center}}
+\makeatother
+
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
+\rhead{PG ML4PdM}
+\lhead{Selami Hoxha}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\clearpage
+\pagenumbering{arabic}
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 10 \hfill \date{11 March, 2021}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item
+                         Created the first version of the class diagram for HIE
+                   \item
+                         Created the first version of the sequence diagrams for the three approaches.
+                   \item
+                         Together with the team discussed and made changes to the general class diagram.
+                   \item
+                         Wrote a short description of the general class diagram on the system design document.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Challenges}
+             \begin{enumerate}
+                   \item
+                         When creating the class diagram it was hard to forsee which parameters will each class have.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item
+                         Finalize the class diagram.
+                   \item
+                         Finalize the sequence diagram.
+                   \item
+                         Write a description on the system design document for the class diagram and sequence diagrams.
+                   \item
+                         Imporve the description of the general class diagram in the system design document.
+
+             \end{enumerate}
+       \end{subsection}
+       %   \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 9  \hfill \date{05 March, 2021}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item Wrote the example part in the data format documentation
+                   \item Together with the team worked on the class diagram.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item Finalize the data format chapter.
+                   \item Add the class diagrams for the HI chapter.
+                   \item Create the sequence diagrams for the HI chapter.
+             \end{enumerate}
+       \end{subsection}
+
+       %  \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 8  \hfill \date{26 February, 2021}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item Worked together with the team to come up with the initial data format for the ML4PdM framework.
+                   \item Wrote the example part in the initial data format documentation.
+                   \item Together with the team redefined the data format based on the feedback we got on the wednesday meeting of 24 February.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item Write the documentation for the defined data format.
+                   \item Help the team in the framework design.
+             \end{enumerate}
+       \end{subsection}
+
+       %  \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 7  \hfill \date{19 February, 2021}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item Reviewed survey chapters:
+                         \begin{enumerate}
+                               \item Introduction
+                               \item Formal definition of time series
+                               \item RUL
+                               \item Conlusion
+                               \item References
+                         \end{enumerate}
+                   \item
+                         Made the final changes to the sruvey based on the second
+                         review.
+                   \item Checked my work for spelling and punctuation mistakes.
+                   \item Fixed the dataset references to show in bibliography
+                         as a seperate section of bibliography named Datasets (p. 110).
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item Think and design a format for the data representation.
+                   \item Think and help the team in design of an architecture for the ML4PdM framework.
+             \end{enumerate}
+       \end{subsection}
+
+       %  \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 6  \hfill \date{12 February, 2021}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item
+                         Completed changes based on feedback for approaches and publicly avaliable datasets
+                         of the HI chapter. The changes were mostly about fixing
+                         errors, but also included modifying or adding some
+                         content.
+                   \item
+                         Added a very brief introduction of Principal Component
+                         Analysis.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item Review survey chapters:
+                         \begin{enumerate}
+                               \item Introduction
+                               \item Formal definition of time series
+                               \item RUL
+                               \item Conlusion
+                               \item References
+                         \end{enumerate}
+                   \item
+                         Implement the changes in the evaluation section.
+                   \item
+                         Implement the changes based on the second review to
+                         get the final version of the survey.
+             \end{enumerate}
+       \end{subsection}
+
+       %  \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 5  \hfill \date{5 February, 2021}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item
+                         Completed the revision for the alpha version of ML4PdM survey
+                         for chapters:
+                         \begin{enumerate}
+                               \item Introduction
+                               \item Formal definition of time series
+                               \item Health state classification
+                               \item Conlusion
+                               \item References
+                         \end{enumerate}
+                   \item
+                         Made changes based on feeback I received for the Publicly Available Dataset chapter.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item
+                         Make further changes based on feedback for the other parts I have written. That
+                         includes three approaches and evaluation for HI chapter; also the paragraph for
+                         the history of predictive maintenance in the Introduction chapter.
+             \end{enumerate}
+       \end{subsection}
+
+       %  \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 4  \hfill \date{29 January, 2021}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item
+                         Completed writing the Kullback-Leibler approach for multi-sensor prognostics \cite{DBLP:conf/indin/AremuOHM19}.
+                   \item
+                         Completed the evaluation chapter and the publicly available data chapter.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item
+                         Evaluation of the alpha version of the survey. The chapters
+                         that I will cover are:
+                         \begin{enumerate}
+                               \item Introduction
+                               \item Formal definition of Time series
+                               \item Health state chapter
+                               \item Conlusion chapter
+                         \end{enumerate}
+             \end{enumerate}
+       \end{subsection}
+
+       \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 3  \hfill \date{22 January, 2021}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item
+                         Replaced the third approach with an appropriate one.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item
+                         Add dataset for GRNN and ANN approaches.
+                   \item
+                         Fill the evaluation module with the missing metrics.
+                   \item
+                         Revise all the content written for spelling and notation mistakes.
+                   \item
+                         Check the references for correctness.
+             \end{enumerate}
+       \end{subsection}
+
+       %   \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 2 \hfill \date{15 January, 2021}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item
+                         Added new content in Evaluation chapter.
+                   \item
+                         Added the first datasets in the the public available datasets chapter.
+                   \item
+                         Modified some notation in the LSTM-ED approach to correspond with the latest
+                         introduced notation for a single time step in a time series.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Challenges}
+             \begin{enumerate}
+                   \item
+                         It is challenging to adapt the notation for subsequence of a time series in
+                         the way the approach is presented. It is something that might need a bit more
+                         thinking in the review phase.
+                   \item
+                         Have decided that the fuzzy support vector machine approach will not work. The
+                         HI from expert can not be obtained. Hence a replacement should be found.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item
+                         Find more data sets that can be used by the approaches.
+                   \item
+                         Complete the evaluation setup.
+                   \item
+                         Replace fuzzy support vector machine approach.
+             \end{enumerate}
+       \end{subsection}
+
+       %   \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 1 \hfill \date{08 January, 2021}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item
+                         Completed the Fuzzy support vector machines approach.
+                   \item
+                         Completed the hierarchical gated unit network approach.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Challenges}
+             \begin{enumerate}
+                   \item
+                         During writing some questions about notation came up, which should be clarified in the upcoming meetings.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item
+                         Extract the description for publicly available data.
+                   \item
+                         Write the Evaluation Setup section.
+             \end{enumerate}
+       \end{subsection}
+
+       %   \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 52-53 \hfill \date{30 December, 2020}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item
+                         Helped Gourav Prakash complete the formal definition of health index.
+                   \item
+                         Completed the writing of the TLSM encoder decoder approach.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Challenges}
+             \begin{enumerate}
+                   \item
+                         The fuzzy support vector machine approach for determining health index uses discrete values from 1-5 instead
+                         of real values from 0 up to 1 as we defined it in the formal definition. The challenge is to adapt the formal
+                         definition so it captures this case as presented in \cite{6518966}
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item
+                         Write about health index Based prognostics using Ensemble of machine learning algorithms.
+                   \item
+                         Write about determining health index of a system using fuzzy support vector machines.
+             \end{enumerate}
+       \end{subsection}
+
+       \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 51 \hfill \date{18 December, 2020}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item
+                         Have written history of Predictive maintenance. Some improvements are still necessary.
+                   \item
+                         Finalized the plan for the upcoming weeks.
+             \end{enumerate}
+       \end{subsection}
+
+       %    \begin{subsection}*{Challenges}
+       %          \begin{enumerate}
+       %                \item
+       %                     A small challenge has been finding papers that focus soley on health index calculations. 
+       %                     A lot of papers have health index as an itermedeiate result needed for RUL calculation.
+       %          \end{enumerate}
+       %    \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item
+                         Complete the health index formal definition chapter.
+                   \item
+                         Write the first Approach for calculating HI.
+             \end{enumerate}
+       \end{subsection}
+
+       %       \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 50 \hfill \date{11 December, 2020}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item
+                         Done with reading of the seed papers \cite{8097036}, \cite{7377088}, and \cite{malhotra2016multisensor} and
+                         geatherd material that explain different machine learning methods for estimating health index, which will be
+                         studied in detail in the upcoming weeks.
+                   \item
+                         Completed the partition of the work on the heath index section with Gourav Prakash.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Challenges}
+             \begin{enumerate}
+                   \item
+                         A small challenge has been finding papers that focus soley on health index calculations.
+                         A lot of papers have health index as an itermedeiate result needed for RUL calculation.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item
+                         Write down the plan for the upcoming seven weeks.
+                   \item
+                         Start with the first two methods for calculating health index, Subsystem-Based GRNN
+                         \cite{8097036} and Neural Networks \cite{7377088}.
+                   \item Write the history of predictive maintenance part for the Introduction chapter.
+             \end{enumerate}
+       \end{subsection}
+
+       \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 49 \hfill \date{04 December, 2020}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item Participated in the thursday meeting where we decided the primary structure of the survey document.
+                   \item Had an initial meeting with Gourav Prakash where we discussed our intial thougts
+                         for a plan for milestone 2.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Challenges}
+             \begin{enumerate}
+                   \item Deciding on the pipleine elements that will be included.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item Seperation of the work for the subtopic.
+                   \item Give a short description for each section of Health Index estimation subtopic.
+                   \item Read the seed papers \cite{8097036}, \cite{7377088}, and \cite{malhotra2016multisensor} and start gathering literature
+                         for other methods.
+             \end{enumerate}
+       \end{subsection}
+
+       \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 48 \hfill \date{27 November, 2020}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item
+                         In this week I looked up some extra information on how feature extraction can be achieved. More precisely I
+                         looked at \emph{Vibration Feature Extraction Techniques for Fault Diagnosis of Rotating Machinery -
+                               A Literature Survey}. The focus of this survey were techniques for feature extraction from vibration data
+                         in rotating machinery. Techniques for extraction in time domain, frequency domain and time-frequency
+                         domain were presented. Also, their performance was evaluated. \cite{survey5}
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Challenges}
+             \begin{enumerate}
+                   \item
+                         If the subtopic I will be working on is feature extraction, then a few of the techniques presented
+                         in \cite{survey5} will need a bit more attention and understanding.
+             \end{enumerate}
+       \end{subsection}
+
+       \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 47 \hfill \date{20 November, 2020}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item
+                         Read \emph{Development and Performance Evaluation of Prognostic Approaches for Technical Systems} by James Kuria
+                         Kimotho up to chapter 4. The work covers in a detailed manner the prognostic approaches. Initially an overview
+                         of diagnostic and prognostic approaches is 	given (chapter 1 and 2). Then, methodologies for preprocessing
+                         of the data, feature extraction, and feature selection are presented (chapter 3). Lastly, methods for identifying
+                         the health states, estimating health index and calculating RUL are given (chapter 4). Also, applications
+                         of these methodologies and their results are presented. \cite{jkkimothoprog}
+             \end{enumerate}
+       \end{subsection}
+
+       %\begin{subsection}*{Challenges}
+       %    \begin{enumerate}
+       %        \item
+       %           
+       %        \item
+       %            Narrow down the choice of the subtopic.
+       %    \end{enumerate}
+       %\end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item
+                         Research focused on feature extraction and health detection/health classification as a preparation for
+                         the subtopic selection.
+             \end{enumerate}
+       \end{subsection}
+
+       \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+%If u want to add more pages? --> copy the below code and paste it here.
+\newpage
+\begin{section}*{Calendar Week: 46 \hfill \date{13 November, 2020}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item
+                         Read the survey \emph{A Survey of Predictive Maintenance: Systems, Purposes and Approaches}.
+                         This survey is focused on system architectures, purposes and approaches used for developing
+                         a PdM system. Firstly, three types of architectures are described: Open System Architecture
+                         for Condition Based Monitoring (OSA-CBM), Cloud enhanced PdM systems and PdM 4.0. Then,
+                         cost minimization and reliability/availability maximization and are given as the purpose
+                         of these systems. Lastly, PdM approaches are categorized in three categories: knowledge
+                         based, machine learning (ML) based and deep learning (DL) based. Then an overview of
+                         these methods is given, with more focus on the DL methods.
+                         \cite{DBLP:journals/corr/abs-1912-07383}
+                   \item
+                         The survey \emph{A systematic literature review of machine learning methods applied to predictive
+                               maintenance} gives an overview of the latest research being done in PdM. Also, there is given a
+                         summary of the journals and conferences where these papers are published. Also, a summary of the
+                         most recent ML methods that are used to achieve PdM is given. Furthermore, public data sets
+                         for use in predictive maintenance are presented.   \cite{DBLP:journals/candie/CarvalhoSVFBA19}
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Challenges}
+             \begin{enumerate}
+                   \item
+                         Understanding some of the more complicated DL methods.
+                   \item
+                         Narrow down the choice of the subtopic.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item
+                         Reading more about some of the mentioned  DL methods to get a basic understanding.
+                   \item
+                         Explore more on how feature extraction is realized.
+             \end{enumerate}
+       \end{subsection}
+
+       \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 45 \hfill \date{06 November, 2020}}
+ \begin{refsection}
+
+       \begin{subsection}*{Completed Tasks}
+             \begin{enumerate}
+                   \item
+                         Followed and supported the team, on a lengthy meeting, with the setting up of the working
+                         tools we are going to use.
+                   \item
+                         Read the survey titled \emph{Data-Driven Methods for Predictive Maintenance of Industrial
+                               Equipment: A survey}. Firstly, the survey presented an overview on maintenance methods. Then
+                         the Data-Driven methods are presented as the most important methods for achieving effective
+                         maintenance. The increase of importance of these methods comes as a result of many big
+                         industrial projects that are happening around the world, ex. Industry 4.0 in Germany.
+                         I also learned the structure of a data-driven PdM system and its challenges for
+                         implementation. Lastly the paper presented Machine Learning and Deep Learning
+                         methods that are used in various research papers for implementing such a system.
+                         An analysis of these methods is given in terms of accuracy and the challenges faced.
+                         \cite{DBLP:journals/sj/ZhangYW19}
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Challenges}
+             \begin{enumerate}
+                   \item
+                         Get used to the workflow of the project and improve the knowledge on the tools we are going
+                         to use.
+                   \item
+                         Help the team further improve our work environment.
+             \end{enumerate}
+       \end{subsection}
+
+       \begin{subsection}*{Tasks in-progress}
+             \begin{enumerate}
+                   \item
+                         Read the other surveys.
+                   \item
+                         Research on how are some of the PdM problems are handled in practice.
+             \end{enumerate}
+       \end{subsection}
+
+       \printbibliography
+ \end{refsection}
+\end{section}
+% Page end here.
+
+\end{document}

@@ -1,0 +1,1301 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\title{Project Group:\\
+\textbf{Machine Learning for Predictive Maintenance}\\
+(Weekly Status Report)}
+
+\author{Supervisors:\\
+\textbf{Prof. Dr. Eyke H{\"u}llermeier (eyke@upb.de)}\\
+\textbf{Tanja Tornede (tanja.tornede@upb.de)}\\ 
+\vspace{10mm}
+Name: Paul Fährmann \\
+Matriculation Number: 7006813\\
+E-mail: pauldf@mail.uni-paderborn.de
+}
+\date{}
+
+% Definition of \maketitle
+\makeatletter
+\def \@maketitle{
+\begin{center}
+\includegraphics[width=10cm, height=3cm]{logo.png}\\
+{\vspace{12mm} \@title}\\[4ex]
+{\@author}\\[4ex]
+\end{center}}
+\makeatother
+
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
+\rhead{PG ML4PdM}
+\lhead{Paul Fährmann}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\clearpage
+\pagenumbering{arabic}
+
+% New page start here.
+\newpage
+\begin{section}*{Summary of main contributions}
+	\begin{subsection}*{Introduction to PdM}
+		\begin{enumerate}
+			\item Created GitLab structure and folder structures for our documentation repository
+			\item Connected GitLab update information of both repositories (code and documentation) with Microsoft Teams (with Christopher)
+		\end{enumerate}
+	\end{subsection}
+	\begin{subsection}*{Topic Study \& Requirement Analysis}
+		\begin{enumerate}
+			\item Planning the distribution and topics to include from the survey papers in the Time Series Feature Extraction (TSFE) topic (with Sanjay). Also further discussions about how to extend our chapter later on.
+			\item Discussed, created explanations and formulated the formal definition for time series.
+			\item Searched and added quotes for the different chapters.
+			\item Wrote the Formal Definition, Frequency Domain Approaches (DFT for basic features, BOSS), Time and Frequency Domain Approaches (DWT, EMD) and the Evaluation Setup in the TSFE chapter. Also created a lot of new, clean visualizations for these approaches.
+			\item Reviewed Introduction, Conclusion, References, Health State and RUL chapters
+		\end{enumerate}
+	\end{subsection}
+	\begin{subsection}*{System Design}
+		\begin{enumerate}
+			\item Was part of the discussion and creation the PDMFF file format.
+			\item Also discussed the abstract class diagrams with Sanjay and Christopher, including conventions about alignment, naming, inheritance and other details. Aligned the final version of our abstract class diagram.
+			\item Discussed changes to the loops of the general sequence diagram.
+			\item Created sequence diagrams for PytsTransformWrapper, TimeSeriesImputer, PywtWrapper, EMDSignalWrapper, UniToMultivariateWrapper and added explanations of them in our system design document.
+			\item Created a testing strategy based on \textit{pytest} with three levels: Unit, Integration and System.
+			\item Developed the package folder structure of our code repository.
+		\end{enumerate}
+	\end{subsection}
+	\begin{subsection}*{Implementation}
+		\begin{enumerate}
+			\item Created our "code" repository in GitLab including package structure, master and develop branch, gitignore and included our merge request template.
+			\item Implemented the following classes completely: Evaluator, UniToMultivariateWrapper, PytsTransformWrapper, PytsSupportedAlgorithm, EMDSignalWrapper, PywtWrapper, TimeSeriesImputer, AttributeFilter, DatasetToSklearn and ML4PdM.
+			\item Also included multiprocessing capability for the UniToMultivariateWrapper.
+			\item Implemented the AttributeTypes system with their different classes and parser for NUMERIC, SETOFLABELS, DATETIME, TIMESERIES and MULTIDIMENSIONAL
+			\item Implemented several useful methods in other classes including generate\_simple\_cut\_dataset and get\_time\_series\_data\_as\_array in Dataset and listify\_time\_series and attach\_timesteps as basic functions.
+			\item Discussed a lot of issues about implementation and test coverage of the DatasetParser with Vinay.
+			\item Lots of personal discussions and reviews of implementations of classes for Sanjay and Vinay. Reviewed lots of official merge requests of all the other members, especially at the end of the implementation phase.
+		\end{enumerate}
+	\end{subsection}
+	\begin{subsection}*{Final Presentation}
+		\begin{enumerate}
+			\item Organized a lot of meetings with the group but also individual members to plan and distribute workload. Also started and lead the conversations around the motivation and "story" parts of the presentation.
+			\item Created the Challenges and Solutions Part int the Introduction part of the final presentation.
+			\item Created and described the How-To-Use example and our data format PDMFF in our documentation.
+		\end{enumerate}
+		
+	\end{subsection}
+
+\end{section}
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 38 \hfill \date{24 September, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Changing the Example documentation according to discussion: Jupyter Notebook to be able to execute code snippets + simple .py code for easier access + links to the other pipeline notebooks.
+			\item Describing our PDMFF dataformat in a section of the documentation.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Finishing the slides of challenges and solutions for the final presentation
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 37 \hfill \date{17 September, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item finishing the output and config file version of the sipmle pipeline example.
+			\item discussed the better presentation slides and motivation (with team).
+			\item discussed the motivation and introduction slides with Vinay
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Changing the Example documentation according to discussion: Jupyter Notebook to be able to execute code snippets + simple .py code for easier access + links to the other pipeline notebooks.
+			\item Describing our PDMFF dataformat in a section of the documentation.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 36 \hfill \date{10 September, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Discussed the distributed the tasks for the presentation as well as the final decision on the logo (with team).
+			\item Described a simple pipeline example in the documentation.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item finishing the output and config file version of the sipmle pipeline example
+			\item Describing our PDMFF dataformat in a section of the documentation.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 35 \hfill \date{03 September, 2021}}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Writing and describing examples for the documentation on how to use our code to build pipelines and train them on data with all preprocessing and postprocessing steps.
+			\item Describing our PDMFF dataformat in a section of the documentation.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 34 \hfill \date{27 August, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Helped Sanjay and Vinay with their implementation tasks and reviewed their merge requests.
+			\item Implemented RUL target recalculations for the WindowingApproach class
+			\item Fixed several issues regarding my implementations and document strings.
+		\end{enumerate}
+	\end{subsection}
+	
+		\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Discussing and distributing the tasks of the presentation milestone
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 33 \hfill \date{20 August, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Developed simple cut dataset generator in the Dataset class which cuts "full time series data" into a RUL regression task.
+			\item Developed multiprocessing capability for the UniToMultivariateWrapper, which then can process/transform multiple TIMESERIES attributes in parallel.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Tests of the TsfreshWrapper and its functionality in pipelines on data. (with Sanjay)
+			\item Check all documentation strings of sphinx to be in the correct format in the documentation website that gets created automatically.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 32 \hfill \date{13 August, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Developed ML4PdM wrapper and DatasetToSklearn Transformer.
+			\item Developed AttributeFilter transformer which omits certain attributes completely from a dataset. This can be directly indexed and/or conditioned on the number of unique values found in that attribute over the whole dataset.
+			\item Writing some integration tests with pipelines of multiple ml4pdm transformers and sklearn RandomForestRegressor. Results are not unreasonable.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Further integration and system tests.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 31 \hfill \date{06 August, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Finished PywtWrapper with it now using Dataset as input and output types.
+			\item Changing the input and output types of all my other transformer classes to only allow objects of type Dataset to be passed. These are EMDSignalWrapper, PytsTransformWrapper and PytsImputer.
+			\item Changed Evaluator to now use Dataset object as input and output.
+			\item Fixing the UniToMultivariateWrapper to streamline the functionality of putting the transformed and not transformed features back together. Also changing the output format of TimeseriesTransformer Subclasses to match the change.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Developing ML4PdM wrapper and DatasetToSklearn Transformer.
+			\item Writing system tests with pipelines of multiple ml4pdm transformers and sklearn predictors. Also running synthetic and real cmapss data for those tests.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 30 \hfill \date{30 July, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Finished and merged the AttributeType class and subclasses \\NUMERIC, DATETIME, TIMESERIES, MULTIDIMENSIONAL and
+			SETOFLABELS to the develop branch. That included changes to the Dataset and Parser.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Fixing the UniToMultivariateWrapper to streamline the functionality of putting the transformed and not transformed features back together. Also changing the output format of TimeseriesTransformer Subclasses to match the change.
+			\item Changing the input and output types of all my transformer classes to only allow objects of type Dataset to be passed.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 29 \hfill \date{23 July, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Finished and merged the extension of the EMD Signal wrapper, which included the option of multi index output and filling the missing indices with 0 filled time series.
+			\item finished the code functionality of the PywtWrapper.
+			\item added a branch for the extension and fix to the Dataset class. Also added my getter method of the data with timeseries attributes transformed into simple lists.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Testing and documenting the PywtWrapper.
+			\item Fixing the UniToMultivariateWrapper to streamline the functionality of putting the transformed and not transformed features back together. Also changing the output format of TimeseriesTransformer Subclasses to match the change.
+			\item Changing the input and output types of all my transformer classes to only allow objects of type Dataset to be passed.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 28 \hfill \date{16 July, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Finished and merged the first version of the EMD-Signal Wrapper with test coverage and documentation.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Extending the EMD Signal Wrapper to include the option of multi index output and filling the missing indices with 0 filled time series.
+			\item Implementing the PyWaveletWrapper with the 1D discrete wavelet transformation algorithm and checking what other options might be viable in this library.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 27 \hfill \date{09 July, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Decided on the options for the EMD-Signal Wrapper on what components to keep.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Finishing the EMD-Signal Wrapper test coverage
+			\item Testing of the Pywavelet library.
+			\item Writing the synthetic time series data set generator with different options
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 26 \hfill \date{02 July, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item finalized the merge of the following classes: PytsTransformWrapper, TimeSeriesImputer with their documentation and test cases.
+			\item Tested the EMD-Signal library.
+			\item Wrote a listify function that changes the time series format from our representation to a representation that can be used in several different libraries (e.g. EMD-Signal and Pyts).
+		\end{enumerate}
+	\end{subsection}
+
+	\begin{subsection}*{Challenges}
+	\begin{enumerate}
+		\item Finding good ways and options on how to equalize the transformations of the different time series instances in such a way that the EMD-Signal wrapper can be used in a pipeline.
+	\end{enumerate}
+\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Finishing the EMD-Signal Wrapper with options on how and what IMF components and/or the original time series to keep.
+			\item Testing of the Pywavelet library.
+			\item Writing the synthetic time series data set generator with different options
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 25 \hfill \date{25 June, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item finished the documentation, test cases, module modifications of both classes PytsTransformWrapper and TimeSeriesImputer. Also created merge request for them.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Finalizing the merge of the two classes mentioned above
+			\item Checking EMD Signal library and Pywavelet library for necessary formatting of our time series representation.
+			\item Writing the synthetic time series data set generator with different options
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 24 \hfill \date{18 June, 2021}}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Add automatic testing of different length time series to allow only certain Pyts algorithms for the PytsTransformWrapper.
+			\item Writing the testing methods and class for PytsTransformWrapper class specifically if and what Imputer algorithm works best for what pyts transformation algorithm.
+			\item Writing the testing methods and class for the TimeseriesImputer class.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 23 \hfill \date{11 June, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Implemented functional TimeseriesImputer including the equalization of the lengths of the instances, and imputing the missing values by 2 handcrafted algorithms and by using the pyts InterpolationImputer class via keywords.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Writing the testing methods and class for PytsTransformWrapper class specifically if and what Imputer algorithm works best for what pyts transformation algorithm.
+			\item Writing the testing methods and class for the TimeseriesImputer class.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 22 \hfill \date{04 June, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Implemented base format changing code for the TimeSeriesImputer class including length equalizing and filling the resulting missing values with NaNs. This can then be used to apply any Imputer algorithm and get instances of equal lengths back.
+			\item Fixed some errors in the base format changing code for the PytsTransformWrapper for two different formats of time series. One is a list of pairs of (timestep, value), the other a simple list of values.
+		\end{enumerate}
+	\end{subsection}
+
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Implementing PytsTransformWrapper with the enum design.
+			\item Implementing in tandem to the first task the TimeseriesImputer class.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 21 \hfill \date{28 May, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Finished the transformation method, that transforms our time series representation into the representation that works with the classes of the pyts library.
+			\item Discussed code design ideas for the PytsTransformWrapper with Tanja including the usage of custom made enums in python.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Challenges}
+		\begin{enumerate}
+			\item Facing an issue with a missing library for the pyts library to work properly. Needed to install the library "numba" and needed to reinstall the whole ml4pdm anaconda environment in the process.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Implementing PytsTransformWrapper with the enum design.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 20 \hfill \date{20 May, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Finished UniToMultivariateWrapper and FixedSizeFeatureExtractor code, test coverage and documentation and merged it onto the develop branch.
+			\item discussed test coverage of the Dataset Parser with Vinay.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Challenges}
+		\begin{enumerate}
+			\item Facing an issues with circular imports for which I needed to disable the autoformatting of imports in a module \_\_init\_\_.py file to fix it.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Implementing PytsTransformWrapper
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 19 \hfill \date{14 May, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Finished evaluator code, test coverage and documentation and merged it onto the develop branch.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Testing UniToMultivariateWrapper class with mock objects.
+			\item Finishing abstract classes
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 18 \hfill \date{07 May, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Finished first version code for UniToMultivariateWrapper, specifically the aggregation for fixed size feature extraction and time series transformation.
+			\item Discussed the current version of the dataset parser and representation of time series in the Dataset class with Vinay.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Testing UniToMultivariateWrapper class with mock objects.
+			\item Changing the abstract classes with @abstractmethod and pass as discussed with the group.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 17 \hfill \date{30 April, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Implemented rough/untested version of UniToMultivariateWrapper for wrapping univariate transformer classes for multivariate timeseries instances.
+			\item Researched Multi- and Univariate Timeseries Imputers including GAN, Recurrent Neural Networks and basic random sampling from the unimputed timeseries.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Finishing UniToMultivariateWrapper class with tests.
+			\item Testing that synthetic and real datasets are running through the current system of Evaluator and Transformers/Regressors correctly.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 16 \hfill \date{23 April, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Splitting up the rest of the abstract classes and functions/methods to implement from the general class diagram with the team.
+			\item Discussed changes to the Dataset Parser and Dataset classes with the team including static methods and what return value we expect.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Implementing the FixedSizeFeatureExtractor class in a feature branch.
+			\item Checking the functionality of dataset class together with the evaluator class.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 15 \hfill \date{16 April, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Finished the Evaluator class with current status of the other classes.
+			\item Created first test cases for that class with datasets from sklearn.datasets
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Waiting for Dataset class to finish to check the functionality with the Evaluator.
+			\item Checking ideas on how to "fix" time series such that they can be used in the different libraries.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 14 \hfill \date{09 April, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Created first code for the "Evaluator" class.
+			\item Added \_\_init\_\_ python files to mark the folder structure as a python module. Also added an import to be able to import a class directly from a directory.
+			\item Created test class for the "Evaluator" class.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Challenges}
+		\begin{enumerate}
+			\item Setting up vscode with the correct python interpreter from the anaconda environment created a lot of problems that took several hours distributed over 2-3 days to fix with multiple reinstallations of the vscode IDE, Anaconda, the Anaconda environment as well as python itself.
+			\item There are a lot of cross information on how the classes are set up that are necessary to finish the code of these classes. That takes more time and iterations than expected.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Filling in the rest of the missing code for the "Evaluator" as well as for the test class of the "Evaluator"
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 13 \hfill \date{02 April, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Set up Visual Studio Code IDE with Python extension.
+			\item Set up anaconda environment via anaconda prompt.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Creating first "Evaluator" class with basic functionality as well as the test cases for it.
+			\item Checking the functionality of our branches and their protection.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 12 \hfill \date{26 March, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Added footnotes with links to the api or download pages of different libraries some of the TFE classes are based on.
+			\item Created package structure idea for our library in which we will create our classes.
+			\item Created a testing strategy based on \textit{pytest} with three levels of testing: Unit, Integration and System.
+			\item Created our "code" repository in GitLab including:
+			\begin{itemize}
+				\item package structure as a folders according to our system design.
+				\item master and develop branch with different protection settings
+				\item gitignore for python
+				\item merge request template 
+			\end{itemize}
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Setting up the Visual Studio Code IDE for python and testing its functionality.
+			\item Setting up the anaconda environment and download the correct libraries.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 11 \hfill \date{19 March, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Discussed with team changes on general sequence and class diagram including:
+			\begin{itemize}
+				\item Changes the inheritance of the HealthIndexEstimator.
+				\item Changes to the general sequence diagrams with loops and aggregation of evaluations as well as configuration parsing loops.
+			\end{itemize}
+			\item Discussed the allocation and plan for the quality assurance part of our document with the team.
+			\item Created the UniToMultivariateWrapper class and sequence diagram.
+			\item Created first versions of the package structure.
+			\item Researched some test frameworks: unittest, DocTest and PyTest with their advantages and disadvantages.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Creating the package structure and including it in the document.
+			\item Finishing the time series transformer and feature extractor classes and sequence diagrams with descriptions included in the document.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 10 \hfill \date{12 March, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Included classes in tfe class diagram, also created sequence diagrams, extracted them and explained them:
+			\begin{itemize}
+				\item pyts-transform-wrapper
+				\item pyts-impute-wrapper
+				\item pywt-wrapper
+				\item PyEMD-wrapper
+			\end{itemize}
+			\item Cleaned and aligned the general/abstract class diagram.
+			\item Discussed the class and sequence diagrams with the team including aligning, naming and other conventions.
+			\item Applied changes on the sequence diagrams: constructor part.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item applying changes discussed with the team on the weekly meeting including:
+			\begin{itemize}
+				\item Sorting the feature/preprocessing class diagram to include timeseries to timeseries transformers.
+				\item Changing the general sequence diagram to include the full evaluation algorithm.
+			\end{itemize}
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 09 \hfill \date{05 March, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Reviewed the description of the data format.
+			\item Discussed changes and extension on the class/interface diagram with the team including:
+			\begin{itemize}
+				\item Deciding on version B: pre defined pipelines for approaches.
+				\item discussing on the configuration parser and format, specifically for parameters of the approaches.
+				\item changes on the naming convention of interfaces and classes.
+				\item addition of actual classes for the different estimators and the loss/score functions. 
+			\end{itemize}
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Extracting and filling feature extraction and preprocessing classes with parameters and functions.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 08 \hfill \date{26 February, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Discussed the data format and created example ideas and explanations with team including:
+			\begin{itemize}
+				\item Extending and slightly changing the Attribute Relation File Format.
+				\item Creating a recursive definition for time series.
+				\item Format design, such that all the data is represented in one file.
+			\end{itemize}
+			\item Discussed the general abstract interface diagrams with Christopher and Sanjay.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item describing the data format and reviewing descriptions on diagrams and format.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 07 \hfill \date{19 February, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item implemented changes according the 2nd review including:
+			\begin{itemize}
+				\item addition of some more explanations for unclear parts
+				\item fixing general typing/grammar mistakes
+				\item formatting the text and images to not split text that should be together
+			\end{itemize}
+			\item added empty architecture document.
+			\item discussed the data format with Vinay, Saghar and Selami. We created a first draft for the data file format.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item writing and creating the data format and corresponding descriptions
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 06 \hfill \date{12 February, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item implemented changes in TSFE chapter according to first review including:
+			\begin{itemize}
+				\item creating new images without a grid background or completely new images for images taken from a paper.
+				\item changing textbf and underline to subsubsection and paragraph respectively.
+				\item fixing text mistakes denoted by the comments.
+			\end{itemize}
+			\item implemented changes in conclusion chapter according to first review including:
+			\begin{itemize}
+				\item changing textbf to subsection*
+				\item fixing text mistakes denoted by the comments on my part of it.
+			\end{itemize}
+			\item Reviewed the whole Health State chapter.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item implementing 2nd review of TSFE chapter
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 05 \hfill \date{05 February, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Reviewed the RUL chapter.
+			\item Merged all comments from all 8 reviews of our survey into one commented pdf.
+			\item applied changes to the introduction chapter: structure of survey for TSFE according to review comments.
+			\item created and changed images in TSFE that were probably not allowed to be used; also positioning of images changed.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item applying changed according to comments of the review in the TSFE chapter on my parts.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 04 \hfill \date{29 January, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Reviewed the Introduction, Conclusion and References and added comments accordingly. 
+			\item Removed TODO from conclusion and added annotation of authors.
+			\item Added quotes to all chapters that were missing quotes.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Reviewing of RUL chapter and adding useful comments.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 03 \hfill \date{22 January, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item discussed git structure with branches, version tags, commit message convention. (with Christopher, Vinay and Sanjay)
+			\item added a lot of references for methods in TSFE and images and sorted them in the .bib
+			\item finished the alpha version for all of my methods with explanatory images, specifically DWT, BOSS and EMD in the TSFE chapter.
+			\item added a short part on feature selection in evaluation setup of TSFE.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Challenges}
+		\begin{enumerate}
+			\item Finding the right way to describe DWT was not easy.
+		\end{enumerate}
+	\end{subsection}
+	
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 02 \hfill \date{15 January, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item fixed a lot of small details/mistakes in the whole chapter of the parts of TSFE.
+			\item created a better structure for evaluation setup in TSFE with simple example and explanation for leave-one-out cross validation.
+			\item discussed some ideas and structure for the conclusion chapter (with Christopher and Vinay). Also added first intro text for conclusion.
+			\item added first descriptions and formulas for DWT, discrete wavelet transform in TSFE.
+			\item added structure of the document description for TSFE chapter.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Challenges}
+		\begin{enumerate}
+			\item Cannot the papers in DBLP easily, that I have found via Google Scholar, so I have to decide between not referencing it or using the .bib reference given by Google Scholar.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Finishing alpha version of Time and Frequency Domain
+			\item Finding references for the methods
+			\item creating some pictures for explanations
+		\end{enumerate}
+	\end{subsection}
+\end{section}
+% Page end here.
+
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 01 \hfill \date{08 January, 2021}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Fixed the introduction and formula notation for the frequency domain in TSFE.
+			\item added missing bibliography references for the different methods in TSFE.
+			\item added description of the BOSS method in TSFE.
+			\item introduction for EMD method in TSFE.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Challenges}
+		\begin{enumerate}
+			\item Finding the balance point between detail and usefulness in describing the methods.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Writing and describing time and frequency domain method EMD in TSFE.
+		\end{enumerate}
+	\end{subsection}
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 52-53 \hfill \date{30 December, 2020}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Discussed the new structuring and addition to our chapter TSFE (with Sanjay).
+			\item Extended the formal definition for TSFE specifically to also differentiate between supervised and unsupervised feature extraction.
+			\item Wrote the introduction and explanation of basic features for frequency domain approaches in TSFE.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Challenges}
+		\begin{enumerate}
+			\item Adapting the notation for different equations and formulas to fit with our formal definition for Time Series and TSFE
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item Writing and describing frequency domain feature extraction method BOSS.
+		\end{enumerate}
+	\end{subsection}
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 51 \hfill \date{18 December, 2020}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Writing the basic formal definition for TSFE
+			\item fixing with the group the formal definition of multivariate time series.
+			\item extending the scope of the TSFE chapter
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Challenges}
+		\begin{enumerate}
+			\item working through and explaining the formal definition and notation of multivariate time series.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item extending the formal problem definition for feature extraction.
+			\item fleshing out the extension of the TSFE chapter.
+		\end{enumerate}
+	\end{subsection}
+\end{section}
+% Page end here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 50 \hfill \date{11 December, 2020}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Reading first \cite{paper1} and second paper \cite{paper2} on TSFE. that included:
+			\begin{itemize}
+				\item explaining the python package "tsfresh"
+				\item a list of 18 classification approaches for time series using distance measure algorithms
+			\end{itemize}
+			\item discussing the formal definition of time series data with the team
+			\item structuring our TSFE topic into bullet points and assigning and annotation authors to those sections (with Sanjay)
+			\item creating a weekly plan for writing the chapter on TSFE. (with Sanjay)
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Challenges}
+		\begin{enumerate}
+			\item understanding how or what feature extraction method to extract from the distance measure algorithms
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item writing the formal problem definition for feature extraction.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{thebibliography}{9}
+		\bibitem{paper1}
+		{Christ, Maximilian, et al.},
+		”Time series feature extraction on basis of scal-able  hypothesis  tests  (tsfresh–a  python  package)”. \textit{Neurocomputing},  
+		307(2018): 72-77.,
+		\href{https://www.sciencedirect.com/science/article/pii/S0925231218304843}{https://www.sciencedirect.com/science/article/pii/S0925231218304843}
+		\bibitem{paper2}
+		{Bagnall, A., et al.},
+		The great time series classification bake off:  An ex-perimental evaluation of recently proposed algorithms.  Extended version.arXiv 2016.”.
+		\textit{arXiv preprint arXiv:1602.01711.},
+		\href{https://arxiv.org/pdf/1602.01711.pdf}{https://arxiv.org/pdf/1602.01711.pdf}
+	\end{thebibliography}
+\end{section}
+% Page end here.
+
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 49 \hfill \date{4 December, 2020}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item 
+			Planning how we work on the topic "Times Series Feature Extraction" (TSFE) (with Sanjay).
+			\item 
+			Created "topic study" folder and added template for our group-survey in our documentation repository \cite{documentation-repository}.
+			\item
+			Working with the team on decisions for the template, specifically how to annotate the author to the sections and subsections.
+	\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Challenges}
+		\begin{enumerate}
+			\item
+			Understanding how we have to adapt the chapter outline for the topic TSFE, as this topic differs somewhat from the other three topics.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+		 \item Reading first \cite{paper1} and second paper \cite{paper2} listed on the "Milestone 2: Topics" document for our topic TSFE.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{thebibliography}{9}
+		\bibitem{paper1}
+		{Christ, Maximilian, et al.},
+		”Time series feature extraction on basis of scal-able  hypothesis  tests  (tsfresh–a  python  package)”. \textit{Neurocomputing},  
+		307(2018): 72-77.,
+		\href{https://www.sciencedirect.com/science/article/pii/S0925231218304843}{https://www.sciencedirect.com/science/article/pii/S0925231218304843}
+		\bibitem{paper2}
+		{Bagnall, A., et al.},
+		The great time series classification bake off:  An ex-perimental evaluation of recently proposed algorithms.  Extended version.arXiv 2016.”.
+		\textit{arXiv preprint arXiv:1602.01711.},
+		\href{https://arxiv.org/pdf/1602.01711.pdf}{https://arxiv.org/pdf/1602.01711.pdf}
+		\bibitem{documentation-repository}
+		\href{https://git.cs.uni-paderborn.de/machine-learning-for-predictive-maintenance/documentation}{https://git.cs.uni-paderborn.de/machine-learning-for-predictive-maintenance/documentation}.
+	\end{thebibliography}
+\end{section}
+% Page end here.
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 48 \hfill \date{27 November, 2020}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Finished reading third survey \cite{survey3}, which:
+			\begin{itemize}
+				\item summarizes the application of RF, ANN, SVM (also SVR) and K-means in the field of PdM.
+				\item proposes and uses a literature review planning protocol for the papers on PdM.
+				\item meta-analyses these papers (e.g. citation and methods analysis, distribution along the years).
+			\end{itemize}
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item
+			Reading dissertation \cite{survey4}.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{thebibliography}{9}
+		\bibitem{survey3}
+		{T. P. Carvalho and F. Soares and R. Vita and R. Francisco and Jo{\~a}o P. Basto and Symone G.S. Alcal{\'a}},
+		“A systematic literature review of machine learning methods applied to predictive maintenance",
+		\textit{Computers \&\ Industrial Engineering},
+		vol. 137,
+		p. 106024,
+		2019.
+		\bibitem{survey4}
+		{J. K. Kimotho}, 
+		“Development and performance evaluation of prognostic ap-proaches  for  technical  systems,”.
+		Ph.D.  dissertation,  
+		2016,  
+		\href{https://digital.ub.uni-paderborn.de/hsx/content/titleinfo/2219021}{https://digital.ub.uni-paderborn.de/hsx/content/titleinfo/2219021}.
+	\end{thebibliography}
+\end{section}
+% Page end here.
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 47 \hfill \date{20 November, 2020}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item Finished reading second survey \cite{survey2}, which:
+			\begin{itemize}
+				\item explains the general framework and workflow of a PdM-system using the example of washing equipment.
+				\item explained three classic ML models: LR, SVM and DT/RF shortly and creates a big overview of their application in PdM in the literature.
+				\item explaines three neural network method: ANN, DNN and AE and their application in Pdm similar to above. 
+			\end{itemize}
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item
+			Reading third survey \cite{survey3}.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{thebibliography}{9}
+		\bibitem{survey3}
+		{T. P. Carvalho and F. Soares and R. Vita and R. Francisco and Jo{\~a}o P. Basto and Symone G.S. Alcal{\'a}},
+		“A systematic literature review of machine learning methods applied to predictive maintenance",
+		\textit{Computers \&\ Industrial Engineering},
+		vol. 137,
+		p. 106024,
+		2019.
+		\bibitem{survey2}
+		{W. {Zhang} and D. {Yang} and H. {Wang}},
+		"Data-Driven Methods for Predictive Maintenance of Industrial Equipment: A Survey",
+		\textit{IEEE Systems Journal},
+		vol. 13,
+		no. 3,
+		pp. 2213-2227,
+		2019,
+		\href{https://ieeexplore.ieee.org/document/8707108}{https://ieeexplore.ieee.org/document/8707108}.
+	\end{thebibliography}
+\end{section}
+% Page end here.
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 46 \hfill \date{13 November, 2020}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item
+			Fixed my weekly report according to our discussion (references per week instead of for the whole document) and removed unnecessary .bib file from our documentation repository \cite{documentation-repository}.
+			\item
+			Finished reading first survey \cite{survey1}, which includes:
+			\begin{itemize}
+				\item a high level view of Maintenance through broad categories: PdM, PM and RM.
+				\item an overview of system architectures for PdM like Maintenance 4.0, Cloud-based approaches and OSA-CBM.
+				\item a presentation of different objectives of PdM: cost minimization, availability and reliability maximization and multi-objective optimization.
+				\item a review and extensive exploration of the application of knowledge based, classical ML based and Deep Learning based methods aswell as hybrid approaches in the field of PdM.
+				\item a short list of future research areas for PdM.
+			\end{itemize}
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Challenges}
+		\begin{enumerate}
+			\item
+			Not getting overwhelmed by the number of different approaches and applications of ML methods in the topic of PdM.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item
+			Reading second survey \cite{survey2}.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{thebibliography}{9}
+		\bibitem{survey1}
+		{Y. Ran, X. Zhou, P. Lin, Y. Wen, and R. Deng},
+		"A survey of predictive maintenance: Systems, purposes and approaches",
+		\textit{arXiv preprint arXiv:1912.07383},
+		2019,
+		\href{https://arxiv.org/pdf/1912.07383.pdf}{https://arxiv.org/pdf/1912.07383.pdf}.
+		
+		\bibitem{survey2}
+		{W. {Zhang} and D. {Yang} and H. {Wang}},
+		"Data-Driven Methods for Predictive Maintenance of Industrial Equipment: A Survey",
+		\textit{IEEE Systems Journal},
+		vol. 13,
+		no. 3,
+		pp. 2213-2227,
+		2019,
+		\href{https://ieeexplore.ieee.org/document/8707108}{https://ieeexplore.ieee.org/document/8707108}.
+		\bibitem{documentation-repository}
+		\href{https://git.cs.uni-paderborn.de/machine-learning-for-predictive-maintenance/documentation}{https://git.cs.uni-paderborn.de/machine-learning-for-predictive-maintenance/documentation}.
+	\end{thebibliography}
+\end{section}
+% Page end here.
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 45 \hfill \date{06 November, 2020}}
+	
+	\begin{subsection}*{Completed Tasks}
+		\begin{enumerate}
+			\item
+			Created Gitlab structure for the documentation-project.\\
+			started with simple folder structure for minutes and weekly reports:\\
+			for both, a folder with a subfolder for the templates.
+			\item
+			Added a subgroup for the milestones on GitLab.
+			\item
+			Connected GitLab Updates to the Microsoft Teams Group (with Christopher).
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Challenges}
+		\begin{enumerate}
+			\item
+			Connecting GitLab to Sourcetree on my computer was more difficult than expected.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{subsection}*{Tasks in-progress}
+		\begin{enumerate}
+			\item
+			Reading first survey \cite{survey1}.\\
+			wrote down information about the general topics of predictive maintenance: system architectures, objectives and subcategories of fault diagnosis \& prognosis.
+		\end{enumerate}
+	\end{subsection}
+	
+	\begin{thebibliography}{9}
+		\bibitem{survey1}
+		{Y. Ran, X. Zhou, P. Lin, Y. Wen, and R. Deng},
+		"A survey of predictive maintenance: Systems, purposes and approaches",
+		\textit{arXiv preprint arXiv:1912.07383},
+		2019,
+		\href{https://arxiv.org/pdf/1912.07383.pdf}{https://arxiv.org/pdf/1912.07383.pdf}.
+	\end{thebibliography}
+\end{section}
+% Page end here.
+\end{document}

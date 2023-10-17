@@ -1,0 +1,77 @@
+% !TEX root = main.tex
+
+
+% **************************************************
+% Files' Character Encoding
+% **************************************************
+\PassOptionsToPackage{utf8}{inputenc}
+\usepackage{inputenc}
+
+
+% **************************************************
+% Information and Commands for Reuse
+% **************************************************
+\newcommand{\thesisTitle}{Machine Learning For Predictive Maintenance\\System Architecture}
+\newcommand{\thesisName}{Christopher Zinda, Paul Fährmann, Sanjay Gupta, Selami Hoxha, Vinay Kaundinya}
+\newcommand{\thesisSubject}{Machine Learning For Predictive Maintenance - System Architecture}
+\newcommand{\thesisDate}{\today}
+\newcommand{\thesisVersion}{0.1}
+
+\newcommand{\thesisFirstReviewer}{Prof. Eyke Hüllermeier}
+\newcommand{\thesisFirstReviewerUniversity}{\protect{Paderborn University}}
+\newcommand{\thesisFirstReviewerDepartment}{Department of Computer Science}
+
+\newcommand{\thesisSecondReviewer}{Tanja Tornede}
+\newcommand{\thesisSecondReviewerUniversity}{\protect{Paderborn University}}
+\newcommand{\thesisSecondReviewerDepartment}{Department of Computer Science}
+
+\newcommand{\thesisFirstSupervisor}{Prof. Eyke Hüllermeier}
+\newcommand{\thesisSecondSupervisor}{Tanja Tornede}
+
+\newcommand{\thesisUniversity}{}
+\newcommand{\thesisUniversityDepartment}{Department of Computer Science}
+\newcommand{\thesisUniversityInstitute}{Paderborn University}
+\newcommand{\thesisUniversityGroup}{Intelligent Systems and Machine Learning}
+\newcommand{\thesisUniversityCity}{Paderborn}
+\newcommand{\thesisUniversityStreetAddress}{Pohlweg 51}
+\newcommand{\thesisUniversityPostalCode}{33098}
+
+
+% **************************************************
+% Debug LaTeX Information
+% **************************************************
+%\listfiles
+
+
+% **************************************************
+% Load and Configure Packages
+% **************************************************
+\usepackage[english]{babel} % babel system, adjust the language of the content
+\PassOptionsToPackage{% setup clean thesis style
+    figuresep=colon,%
+    sansserif=false,%
+    hangfigurecaption=false,%
+    hangsection=true,%
+    hangsubsection=true,%
+    colorize=full,%
+    colortheme=upbisg,%
+    bibsys=biber,%
+    bibfile=bib-refs,%
+    bibstyle=alphabetic,%
+    wrapfooter=false,%
+}{cleanthesis}
+\usepackage{cleanthesis}
+
+\usepackage{mathtools}
+
+\hypersetup{% setup the hyperref-package options
+    pdftitle={Machine Learning For Predictive Maintenance - System Architecture},    %   - title (PDF meta)
+    pdfsubject={\thesisSubject},%   - subject (PDF meta)
+    pdfauthor={\thesisName},    %   - author (PDF meta)
+    plainpages=false,           %   -
+    colorlinks=false,           %   - colorize links?
+    pdfborder={0 0 0},          %   -
+    breaklinks=true,            %   - allow line break inside links
+    bookmarksnumbered=true,     %
+    bookmarksopen=true          %
+}

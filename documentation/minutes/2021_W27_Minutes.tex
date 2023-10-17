@@ -1,0 +1,35 @@
+\documentclass[11pt]{meetingmins} % Using meetingmins LaTeX class.
+
+\setcommittee{Project Group: Machine Learning for Predictive Maintenance}
+
+\setdate{July 08, 2021. 10:00 - 11:00}
+
+\setpresent{Tanja Tornede\textit{(Supervisor)}, Paul Fährmann, Sanjay Gupta, Vinay Kaundinya.}
+
+\absent{Christopher Zinda}
+
+\begin{document}
+
+\maketitle
+
+\section{Minutes-taker: Paul Fährmann}
+
+\section{Topics Discussed:}
+
+\subsection{Implementation}
+\subsubsection{Details}
+\begin{hiddensubitems}
+    \item Discussed the EMD-Signal wrapper and how to handle different output lengths of the instances. Further discussion after a better explanation and visualization on these imf components in the general chat.
+    \item Discussed test coverage strategy for the tsfresh wrapper class. Don't test individual output values, just execute the code and check simple shapes of output and check error outputs.
+    \item Should extract example/mock data into higher folder for tests, so everyone can use it in their tests.
+    \item If your approach does not generate the same quality/result as a paper, it could just be a difference in the random seed used in the approach.
+    \item Can we use different architectures for neural networks for the approaches? Yes, could be interesting, especially if there is also paper about it.
+    \item Windowed predictor is still in the room, we will discuss about it next week, when Christopher is available.
+\end{hiddensubitems}
+
+\section{Next Meeting:}
+\begin{hiddensubitems}
+    \item Date and time: July 15, 2021 at 10:00 - 12:00
+    \item Person responsible for minutes: Sanjay Gupta
+\end{hiddensubitems}
+\end{document}

@@ -1,0 +1,30 @@
+\documentclass[11pt]{meetingmins} % Using meetingmins LaTeX class.
+
+\setcommittee{Project Group: Machine Learning for Predictive Maintenance}
+
+\setdate{May 20, 2021. 10:00 - 12:00}
+
+\setpresent{Tanja Tornede\textit{(Supervisor)}, Christopher Zinda, Paul Fährmann, Sanjay Gupta, Vinay Kaundinya.}
+
+\begin{document}
+
+\maketitle
+
+\section{Minutes-taker: Paul Fährmann}
+
+\section{Topics Discussed:}
+
+\subsection{Implementation}
+\subsubsection{Details}
+\begin{hiddensubitems}
+	\item Dataset-Parser should be finished, so implementation of approaches can be tested with real data.
+	\item Constructor parameters of classes that inherit from BaseEstimator should save those parameters with the same name in the object (e.g. self.parameter = parameter). Otherwise the get\_params and set\_params methods won't work properly.
+	\item Pay attention to the order of imports on the \_\_init\_\_.py module files to prevent the "partially initialized module [...] circular import" - error.
+\end{hiddensubitems}
+
+\section{Next Meeting:}
+\begin{hiddensubitems}
+	\item Date and time: May 27, 2021 at 10:00 - 12:00
+	\item Person responsible for minutes: Sanjay Gupta
+\end{hiddensubitems}
+\end{document}

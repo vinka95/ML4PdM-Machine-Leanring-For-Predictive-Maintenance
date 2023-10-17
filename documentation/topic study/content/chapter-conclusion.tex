@@ -1,0 +1,43 @@
+% !TEX root = ../main.tex
+%
+\chapter{Conclusion}
+\vspace*{-15mm}
+\hfill{\fontfamily{phv}\normalsize\emph{Christopher Zinda, Gourav Prakash, Paul Fährmann and Vinay Kaundinya}}
+\label{sec:conclusion}
+
+\cleanchapterquote{Prediction is very difficult, especially if it's about the future.}{Nils Bohr}{(Physicist)}
+
+In this survey, we presented and connected three different problems of data-driven Predictive Maintenance: Health State Classification, Health Index Estimation and Remaining Useful Lifetime Estimation. We gave a structured overview of various machine learning models and data sets for those problems and adapted the formal notations of these methods. Also, we researched and presented some feature extraction methods for multivariate time series data.
+
+\subsection*{Pipeline}
+
+The different methods and models presented in this survey are connected in a pipeline setup. We structured the previous chapters along those pipeline elements. Connected through the formal definitions we also advised evaluation setups for each of these pipeline elements in which the collected data sets can be used to evaluate the described methods and models.
+
+\subsection*{Formal definitions}
+
+A common problem when reading and comparing multiple machine learning approaches is that there are always some differences in the understanding of time series and the corresponding formal definition. Therefore we transformed the individual mathematical notations of every paper into one unified standard notation. This way the reader can easily understand new approaches and does not have to learn and adapt multiple different mathematical notations. For this purpose, we also provided a single streamlined definition of time series data in \ref{sec:intro:time-series-definition} which is used throughout the document.
+
+
+\subsection*{Datasets}
+
+Different state-of-the art approaches were described for each of the three different challenges in PdM, Health State Classification, Health Index Estimation and Remaining Useful Lifetime Estimation. Each of these research approaches can be tested and verified on datasets that were described under Available Datasets sections \ref{sec:HS:datasets}, \ref{sec:hi_estimation:datasets} and \ref{sec:rul_estimation:datasets}. Section \ref{sec:HS:datasets} provides an idea on the two publicly available datasets, condition monitoring of hydraulic systems dataset and bearing fault dataset which is used in demonstrating the classification of Health state of a component or subsystem.
+
+We know that Health Index Classification is one of the techniques used to predict the system state. To validate the approaches of Health Index we use the Milling dataset and Bearing data as described under \ref{sec:hi_estimation:datasets}. In RUL estimation, approaches were used to learn complex dependencies between the different sensors of a component and then obtain RUL of the component. Datasets containing multivariate time series of a aero propulsion system were then described under section \ref{sec:rul_estimation:datasets}.
+
+\subsection*{Future work}
+
+Aside from the approaches mentioned in this survey paper, there are a few approaches and aspects of PdM for ML that need further investigation. Some of the few future works are as follows:
+
+
+\begin{enumerate}
+    \item Digital twins: This is a significant way to achieve smart manufacturing, and it offers a new paradigm for diagnosing faults.The advantage of this method is its saves training time and does not require a lot of data from the target task \cite{DBLP:journals/access/XuSLZ19}.
+
+    \item Generative adversarial network(GAN): A good approach to train a classifier in a semi-supervised way. It does not introduce any deterministic bias compared to auto-encoders. Apart from that, it can be used to address the issue of class imbalance \cite{Goodfellow2014GenerativeAN}.
+
+    \item Predictive maintenance in industry 4.0 is one of the popular systematic approaches which focuses mainly on addressing data analytics and machine learning methods to change production procedures, so not comprising predictive maintenance methods and their organization \cite{DBLP:journals/candie/ZontaCRLTL20}.
+\end{enumerate}
+
+However, with the rapid change in technologies where machines are daily confronted with decision making involving a massive input of data and customization in the manufacturing process. The ability to predict the need for maintenance of assets at a specific future moment is one of the main challenges in the Predictive Maintenance for Machine Learning.
+
+
+

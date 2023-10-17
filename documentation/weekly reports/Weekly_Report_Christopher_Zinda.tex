@@ -1,0 +1,1357 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage[sorting=none, backend=biber]{biblatex}
+\begin{filecontents}[overwrite,nosearch]{references.bib}
+@article{DBLP:journals/corr/abs-1912-07383,
+  author        = {Yongyi Ran and
+                   Xin Zhou and
+                   Pengfeng Lin and
+                   Yonggang Wen and
+                   Ruilong Deng},
+  title         = {A Survey of Predictive Maintenance: Systems, Purposes and Approaches},
+  journal       = {CoRR},
+  volume        = {abs/1912.07383},
+  year          = {2019},
+  url           = {http://arxiv.org/abs/1912.07383},
+  archiveprefix = {arXiv},
+  eprint        = {1912.07383},
+  timestamp     = {Wed, 01 Jul 2020 09:22:04 +0200},
+  biburl        = {https://dblp.org/rec/journals/corr/abs-1912-07383.bib},
+  bibsource     = {dblp computer science bibliography, https://dblp.org}
+}
+@article{DBLP:journals/sj/ZhangYW19,
+  author    = {Weiting Zhang and
+               Dong Yang and
+               Hongchao Wang},
+  title     = {Data-Driven Methods for Predictive Maintenance of Industrial Equipment:
+               {A} Survey},
+  journal   = {{IEEE} Syst. J.},
+  volume    = {13},
+  number    = {3},
+  pages     = {2213--2227},
+  year      = {2019},
+  url       = {https://doi.org/10.1109/JSYST.2019.2905565},
+  doi       = {10.1109/JSYST.2019.2905565},
+  timestamp = {Fri, 11 Sep 2020 15:01:32 +0200},
+  biburl    = {https://dblp.org/rec/journals/sj/ZhangYW19.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{DBLP:journals/candie/CarvalhoSVFBA19,
+  author    = {Thyago Peres Carvalho and
+               Fabr{\'{\i}}zzio Alphonsus A. M. N. Soares and
+               Roberto Vita and
+               Roberto da Piedade Francisco and
+               Jo{\~{a}}o P. Basto and
+               Symone G. S. Alcal{\'{a}}},
+  title     = {A systematic literature review of machine learning methods applied
+               to predictive maintenance},
+  journal   = {Comput. Ind. Eng.},
+  volume    = {137},
+  year      = {2019},
+  url       = {https://doi.org/10.1016/j.cie.2019.106024},
+  doi       = {10.1016/j.cie.2019.106024},
+  timestamp = {Mon, 26 Oct 2020 08:24:22 +0100},
+  biburl    = {https://dblp.org/rec/journals/candie/CarvalhoSVFBA19.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{DBLP:journals/corr/abs-1709-01073,
+  author        = {Narendhar Gugulothu and
+                   Vishnu TV and
+                   Pankaj Malhotra and
+                   Lovekesh Vig and
+                   Puneet Agarwal and
+                   Gautam M. Shroff},
+  title         = {Predicting Remaining Useful Life using Time Series Embeddings based
+                   on Recurrent Neural Networks},
+  journal       = {CoRR},
+  volume        = {abs/1709.01073},
+  year          = {2017},
+  url           = {http://arxiv.org/abs/1709.01073},
+  archiveprefix = {arXiv},
+  eprint        = {1709.01073},
+  timestamp     = {Sun, 22 Mar 2020 17:29:03 +0100},
+  biburl        = {https://dblp.org/rec/journals/corr/abs-1709-01073.bib},
+  bibsource     = {dblp computer science bibliography, https://dblp.org}
+}
+@inproceedings{GSCH:mathew2017prediction,
+  author       = {Mathew, Vimala and Toby, Tom and Singh, Vikram and Rao, B Maheswara and Kumar, M Goutham},
+  booktitle    = {2017 IEEE International Conference on Circuits and Systems (ICCS)},
+  title        = {Prediction of Remaining Useful Lifetime (RUL) of turbofan engine using machine learning},
+  year         = {2017},
+  organization = {IEEE},
+  pages        = {306--311},
+  doi          = {10.1109/ICCS1.2017.8326010}
+}
+@article{DBLP:journals/tie/KhelifCMLFZ17,
+  author    = {Racha Khelif and
+               Brigitte Chebel{-}Morello and
+               Simon Malinowski and
+               Emna Laajili and
+               Farhat Fnaiech and
+               Noureddine Zerhouni},
+  title     = {Direct Remaining Useful Life Estimation Based on Support Vector Regression},
+  journal   = {{IEEE} Trans. Ind. Electron.},
+  volume    = {64},
+  number    = {3},
+  pages     = {2276--2285},
+  year      = {2017},
+  url       = {https://doi.org/10.1109/TIE.2016.2623260},
+  doi       = {10.1109/TIE.2016.2623260},
+  timestamp = {Fri, 22 May 2020 15:34:07 +0200},
+  biburl    = {https://dblp.org/rec/journals/tie/KhelifCMLFZ17.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{DBLP:journals/tii/SustoSPMB15,
+  author    = {Gian Antonio Susto and
+               Andrea Schirru and
+               Simone Pampuri and
+               Se{\'{a}}n F. McLoone and
+               Alessandro Beghi},
+  title     = {Machine Learning for Predictive Maintenance: {A} Multiple Classifier
+               Approach},
+  journal   = {{IEEE} Trans. Ind. Informatics},
+  volume    = {11},
+  number    = {3},
+  pages     = {812--820},
+  year      = {2015},
+  url       = {https://doi.org/10.1109/TII.2014.2349359},
+  doi       = {10.1109/TII.2014.2349359},
+  timestamp = {Thu, 21 May 2020 19:34:13 +0200},
+  biburl    = {https://dblp.org/rec/journals/tii/SustoSPMB15.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{GSCH:jennings2016forecasting,
+  title     = {Forecasting obsolescence risk and product life cycle with machine learning},
+  author    = {Jennings, Connor and Wu, Dazhong and Terpenny, Janis},
+  journal   = {IEEE Transactions on Components, Packaging and Manufacturing Technology},
+  volume    = {6},
+  number    = {9},
+  pages     = {1428--1439},
+  year      = {2016},
+  publisher = {IEEE},
+  doi       = {10.1109/TCPMT.2016.2589206}
+}
+@incollection{GSCH:cutler2012random,
+  title     = {Random forests},
+  author    = {Cutler, Adele and Cutler, D Richard and Stevens, John R},
+  booktitle = {Ensemble machine learning: Methods and Applications},
+  pages     = {157--175},
+  year      = {2012},
+  publisher = {Springer US},
+  address   = {Boston, MA},
+  isbn      = {978-1-4419-9326-7},
+  doi       = {10.1007/978-1-4419-9326-7_5},
+  url       = {https://doi.org/10.1007/978-1-4419-9326-7_5},
+  abstract  = {Random Forests were introduced by Leo Breiman [6] who was inspired by earlier work by Amit and Geman [2]. Although not obvious from the description in [6], Random Forests are an extension of Breiman's bagging idea [5] and were developed as a competitor to boosting. Random Forests can be used for either a categorical response variable, referred to in [6] as ``classification,'' or a continuous response, referred to as ``regression.'' Similarly, the predictor variables can be either categorical or continuous.}
+}
+\end{filecontents}
+\addbibresource{references.bib}
+ 
+\title{Project Group:\\
+\textbf{Machine Learning for Predictive Maintenance}\\
+(Weekly Status Report)}
+
+\author{Supervisors:\\
+\textbf{Prof. Dr. Eyke H{\"u}llermeier (eyke@upb.de)}\\
+\textbf{Tanja Tornede (tanja.tornede@upb.de)}\\ 
+\vspace{10mm}
+Name: Christopher Zinda \\
+Matriculation Number: 7080463\\
+E-mail: zindach@mail.upb.de
+}
+\date{}
+
+% Definition of \maketitle
+\makeatletter
+\def \@maketitle{
+\begin{center}
+\includegraphics[width=10cm, height=3cm]{logo.png}\\
+{\vspace{12mm} \@title}\\[4ex]
+{\@author}\\[4ex]
+\end{center}}
+\makeatother
+
+\pagestyle{fancy} 
+\setlength{\headheight}{14pt}
+\rhead{PG ML4PdM}
+\lhead{Christopher Zinda}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\clearpage
+\pagenumbering{arabic}
+
+% New page start here.
+\newpage
+\begin{section}*{Summary}
+
+ \begin{subsection}*{Introduction to PdM}
+   \begin{enumerate}
+     \item
+           Set-up JIRA Instance (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-39}{ML4PDM-39})
+           \begin{enumerate}
+             \item
+                   Invited all project group members
+             \item
+                   Created initial tasks that were mentioned in the Organizational sheet. (with Vinay)
+             \item
+                   Created milestones that were mentioned in the Organizational sheet. (with Vinay)
+             \item
+                   Added basic workflow for Issues
+             \item
+                   Added JIRA Integration in Teams channel "Allgemein"
+
+           \end{enumerate}
+     \item
+           Added "GitLab Updates" Teams channel that reports all changes in the Repository. (with Paul).
+     \item
+           Modified weekly report template to use BibTex instead of BibItems for defining references. Also every reference only has to be added once and not once per page where it is used like before.
+   \end{enumerate}
+ \end{subsection}
+ \begin{subsection}*{Topic Study \& Requirement Analysis}
+   \begin{enumerate}
+     \item
+           Created GitLab CI pipeline that builds the topic study and system design PDFs automatically.
+   \end{enumerate}
+ \end{subsection}
+ \begin{subsection}*{System Design}
+   \begin{enumerate}
+     \item
+           Developed main parts of git concept. (with Vinay, Paul and Sanjay)(\href{https://ml4pdm.atlassian.net/browse/ML4PDM-133}{ML4PDM-133})
+     \item
+           Added Readme for the git concept. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-133}{ML4PDM-133})
+     \item
+           Ran spell check on system design document and optimized a few sections.
+     \item
+           Set up Virtual Machine for GitLab Runner and prepared Docker environment for SonarQube.
+     \item
+           Set up CI Pipeline for Sphinx Python Documentation Generator.\\(\href{https://ml4pdm.atlassian.net/browse/ML4PDM-184}{ML4PDM-184})
+   \end{enumerate}
+ \end{subsection}
+ \begin{subsection}*{Implementation}
+   \begin{enumerate}
+     \item
+           Implemented PipelineConfigParser using jsonpickle. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-193}{ML4PDM-193})
+     \item
+           Set up CI Pipeline using SonarQube. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-184}{ML4PDM-184})
+     \item
+           Set up merge request decoration for SonarQube.
+     \item
+           Implemented metrics functions for 'Asymmetric Loss' and 'Performance Score'. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-195}{ML4PDM-195})
+     \item
+           Implemented more metrics for use in RUL approaches. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-195}{ML4PDM-195})
+     \item
+           Implemented abstract HealthIndexEstimator. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-199}{ML4PDM-199})
+     \item
+           Implemented abstract Predictor. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-200}{ML4PDM-200})
+     \item
+           Implemented abstract RemainingUsefulLifetimeEstimator. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-201}{ML4PDM-201})
+     \item
+           Implemented Embed RUL approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-203}{ML4PDM-203}). Finalized code.
+     \item
+           Implemented windowed predictor
+     \item
+           Split up environment yml for anaconda into different files
+     \item
+           Implemented Multiple Classifier approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-207}{ML4PDM-207})
+     \item
+           Extended Dataset with convenience functions
+     \item
+           Built wrapper for sklearn classes that use feature/multivariate data representation
+     \item
+           Implemented Random Forest approach  (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-217}{ML4PDM-217})
+     \item
+           Created 12 merge requests and reviewed 12 merge requests from others in total.
+     \item
+           Supported team members with various code and GitLab related issues.
+   \end{enumerate}
+ \end{subsection}
+ \begin{subsection}*{Final Presentation}
+   \begin{enumerate}
+     \item
+           Described installation process  (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-228}{ML4PDM-228})
+     \item
+           Written Readme file with links to documentation (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-227}{ML4PDM-227})
+     \item
+           Created PowerPoint slides for Embed RUL and Multiple Classifier approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-240}{ML4PDM-240})
+   \end{enumerate}
+ \end{subsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 39 \hfill \date{30 September, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Created PowerPoint slides for Embed RUL and Multiple Classifier approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-240}{ML4PDM-240})
+       \item
+             Merged my Merge Request \href{https://git.cs.uni-paderborn.de/machine-learning-for-predictive-maintenance/code/-/merge_requests/49}{!49}
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 38 \hfill \date{24 September, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Create PowerPoint slides for Embed RUL and Multiple Classifier approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-240}{ML4PDM-240})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 37 \hfill \date{17 September, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Applied suggestions for installation process  (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-228}{ML4PDM-228})
+     \end{enumerate}
+   \end{subsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Create PowerPoint slides for Embed RUL and Multiple Classifier approach.
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 36 \hfill \date{10 September, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Describe installation process  (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-228}{ML4PDM-228})
+       \item
+             Write Readme file with links to documentation (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-227}{ML4PDM-227})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 35 \hfill \date{3 September, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Describe installation process  (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-228}{ML4PDM-228})
+       \item
+             Write Readme file with links to documentation (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-227}{ML4PDM-227})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 34 \hfill \date{27 August, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Implement Random Forest approach  (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-217}{ML4PDM-217})
+       \item
+             Finalize Embed RUL approach  (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-203}{ML4PDM-203})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 33 \hfill \date{20 August, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implement Random Forest approach  (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-217}{ML4PDM-217})
+       \item
+             Finalize Embed RUL approach  (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-203}{ML4PDM-203})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 32 \hfill \date{13 August, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Build wrapper for sklearn classes that use feature/multivariate data representation
+       \item
+             Finalized Multiple Classifier Approach (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-207}{ML4PDM-207})
+       \item
+             Merged my Merge Request \href{https://git.cs.uni-paderborn.de/machine-learning-for-predictive-maintenance/code/-/merge_requests/27}{!27}
+     \end{enumerate}
+   \end{subsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implement Random Forest approach  (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-217}{ML4PDM-217})
+       \item
+             Finalize Embed RUL approach  (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-203}{ML4PDM-203})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 31 \hfill \date{06 August, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Move general changes to new branch
+       \item
+             Adapt Windowed Predictor to correct specification
+       \item
+             Extend Dataset with convenience functions
+       \item
+             Merged my Merge Request \href{https://git.cs.uni-paderborn.de/machine-learning-for-predictive-maintenance/code/-/merge_requests/23}{!23}
+     \end{enumerate}
+   \end{subsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implement Random Forest approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-217}{ML4PDM-217})
+       \item
+             Build wrapper for sklearn classes that use feature/multivariate data representation
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 30 \hfill \date{30 July, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Implementing Multiple Classifier approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-207}{ML4PDM-207})
+     \end{enumerate}
+   \end{subsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Move general changes to new branch
+       \item
+             Adapt Windowed Predictor to correct specification
+       \item
+             Extend Dataset with convenience functions
+       \item
+             Build wrapper for sklearn classes that use feature/multivariate data representation
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 29 \hfill \date{23 July, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Implementing Embed RUL approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-203}{ML4PDM-203}). Finalized code.
+       \item
+             Implemented windowed predictor
+       \item
+             Split up environment yml for anaconda into different files
+     \end{enumerate}
+   \end{subsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implementing Multiple Classifier approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-207}{ML4PDM-207})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 28 \hfill \date{16 July, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implementing Embed RUL approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-203}{ML4PDM-203}). Finalizing code.
+       \item
+             Start implementing Multiple Classifier approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-207}{ML4PDM-207})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 27 \hfill \date{9 July, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implementing Embed RUL approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-203}{ML4PDM-203}). Running hyperparameter optimization using ray tune and trying to improve overall scores.
+       \item
+             Start implementing Multiple Classifier approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-207}{ML4PDM-207})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 26 \hfill \date{2 July, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implementing Embed RUL approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-203}{ML4PDM-203}). Implemented new variant of the RNN Autoencoder and implemented hyperparameter optimization using ray tune.
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 25 \hfill \date{25 June, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implementing Embed RUL approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-203}{ML4PDM-203}). Adding suggestions from weekly meeting and trying to improve scores.
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 24 \hfill \date{18 June, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implementing Embed RUL approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-203}{ML4PDM-203})
+       \item
+             Implementing Multiple Classifier approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-207}{ML4PDM-207})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 23 \hfill \date{11 June, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implementing Embed RUL approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-203}{ML4PDM-203})
+       \item
+             Implementing Multiple Classifier approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-207}{ML4PDM-207})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 22 \hfill \date{04 June, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implementing Embed RUL approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-203}{ML4PDM-203})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 21 \hfill \date{28 May, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implementing Embed RUL approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-203}{ML4PDM-203})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 20 \hfill \date{21 May, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implementing Embed RUL approach. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-203}{ML4PDM-203})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 19 \hfill \date{14 May, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Implemented abstract HealthIndexEstimator. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-199}{ML4PDM-199})
+       \item
+             Implemented abstract Predictor. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-200}{ML4PDM-200})
+       \item
+             Implemented abstract RemainingUsefulLifetimeEstimator. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-201}{ML4PDM-201})
+       \item
+             Merged my Merge Request \href{https://git.cs.uni-paderborn.de/machine-learning-for-predictive-maintenance/code/-/merge_requests/14}{!14}
+       \item
+             Merged my Merge Request \href{https://git.cs.uni-paderborn.de/machine-learning-for-predictive-maintenance/code/-/merge_requests/15}{!15}
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 18 \hfill \date{07 May, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Implemented more metrics for use in RUL approaches. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-195}{ML4PDM-195})
+       \item
+             Researched the \_\_init\_\_.py files and presented two proposals.
+       \item
+             Merged my Merge Request \href{https://git.cs.uni-paderborn.de/machine-learning-for-predictive-maintenance/code/-/merge_requests/7}{!7}
+     \end{enumerate}
+   \end{subsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implement abstract HealthIndexEstimator. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-199}{ML4PDM-199})
+       \item
+             Implement abstract Predictor. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-200}{ML4PDM-200})
+       \item
+             Implement abstract RemainingUsefulLifetimeEstimator. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-201}{ML4PDM-201})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 17 \hfill \date{30 April, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implement more metrics for use in RUL approaches. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-195}{ML4PDM-195})
+       \item
+             Implement abstract HealthIndexEstimator. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-199}{ML4PDM-199})
+       \item
+             Implement abstract Predictor. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-200}{ML4PDM-200})
+       \item
+             Implement abstract RemainingUsefulLifetimeEstimator. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-201}{ML4PDM-201})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 16 \hfill \date{23 April, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Implemented metrics functions for 'Asymmetric Loss' and 'Performance Score'. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-195}{ML4PDM-195})
+     \end{enumerate}
+   \end{subsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implement more metrics for use in RUL approaches.
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 15 \hfill \date{16 April, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Set up CI Pipeline using SonarQube. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-184}{ML4PDM-184})
+       \item
+             Set up merge request decoration for SonarQube.
+       \item
+             Merged my Merge Request \href{https://git.cs.uni-paderborn.de/machine-learning-for-predictive-maintenance/code/-/merge_requests/6}{!6}
+       \item
+             Merged my Merge Request \href{https://git.cs.uni-paderborn.de/machine-learning-for-predictive-maintenance/code/-/merge_requests/4}{!4}
+     \end{enumerate}
+   \end{subsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implement metrics for use in RUL approaches.
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 14 \hfill \date{09 April, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Set up CI Pipeline for Sphinx Python Documentation Generator.\\(\href{https://ml4pdm.atlassian.net/browse/ML4PDM-184}{ML4PDM-184})
+       \item
+             Implemented PipelineConfigParser using jsonpickle. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-193}{ML4PDM-193})
+       \item
+             Merged my Merge Request \href{https://git.cs.uni-paderborn.de/machine-learning-for-predictive-maintenance/code/-/merge_requests/3}{!3}
+     \end{enumerate}
+   \end{subsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Set up CI Pipeline using SonarQube. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-184}{ML4PDM-184})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 13 \hfill \date{02 April, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Set up Virtual Machine for GitLab Runner and prepared Docker environment for SonarQube.
+     \end{enumerate}
+   \end{subsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Set up CI Pipeline including SonarQube and Sphinx Python Documentation Generator. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-184}{ML4PDM-184})
+       \item
+             Implement PipelineConfigParser. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-193}{ML4PDM-193})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 12 \hfill \date{26 March, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Added documentation of diagrams to system design document.
+       \item
+             Created concept for continuous integration pipeline. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-172}{ML4PDM-172})
+       \item
+             Discussed quality assurance with group and included everything in the system design document.
+       \item
+             Ran spell check on system design document and optimized a few sections.
+     \end{enumerate}
+   \end{subsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Set up CI Pipeline including SonarQube and Sphinx Python Documentation Generator. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-184}{ML4PDM-184})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 11 \hfill \date{19 March, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Finalized RUL sequence and class diagrams. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-180}{ML4PDM-180})
+       \item
+             Finalized general sequence and class diagrams.
+     \end{enumerate}
+   \end{subsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Add documentation of diagrams to system design document.
+       \item
+             Create concept for continuous integration pipeline. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-172}{ML4PDM-172})
+       \item
+             Discuss quality assurance with group and include everything in the system design document.
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 10 \hfill \date{12 March, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Created draft for RUL sequence diagrams. (with Vinay and Paul)\\
+             (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-180}{ML4PDM-180})
+       \item
+             Updated draft for RUL class diagram (with Vinay).
+       \item
+             Updated draft of general sequence diagrams. (with group)
+       \item
+             Updated draft for general class diagram. (with group)
+     \end{enumerate}
+   \end{subsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Finalize RUL sequence and class diagrams. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-180}{ML4PDM-180})
+       \item
+             Finalize general sequence and class diagrams.
+       \item
+             Add documentation of diagrams to system design document.
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 9 \hfill \date{5 March, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Added diagrams to system design document.\\
+             (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-166}{ML4PDM-166})
+       \item
+             Fixed links of built pdf documents.
+       \item
+             Finalized general class diagram. (with group)
+     \end{enumerate}
+   \end{subsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Add details on sequence diagram to system design document.\\
+             (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-166}{ML4PDM-166})
+       \item
+             Update RUL class diagram.
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 8 \hfill \date{26 February, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Discussed class diagram template. (with Anurose, Sanjay, Gourav) (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-164}{ML4PDM-164})
+       \item
+             Created class diagram for RUL chapter. (with Vinay) (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-164}{ML4PDM-164})
+       \item
+             Created first version of sequence diagram. (with Anurose, Sanjay, Gourav) (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-165}{ML4PDM-165})
+       \item
+             Updated class and sequence diagram. (with Sanjay and Paul)\\
+             (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-164}{ML4PDM-164}) (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-165}{ML4PDM-165})
+       \item
+             Added pdf compilation for system design document to CI pipeline.
+     \end{enumerate}
+   \end{subsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Add details on sequence diagram to system design document.\\
+             (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-166}{ML4PDM-166})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 7 \hfill \date{19 February, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Finished 2nd review of feature extraction chapter.
+       \item
+             Implemented 2nd review of RUL chapter.
+     \end{enumerate}
+   \end{subsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Create class diagram with method definitions for RUL chapter.\\(\href{https://ml4pdm.atlassian.net/browse/ML4PDM-164}{ML4PDM-164})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 6 \hfill \date{12 February, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Doing 2nd review of feature extraction chapter.
+       \item
+             Implement 2nd review of RUL chapter after it is finished.
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 5 \hfill \date{5 February, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Reviewed Introduction of Topic Study document. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-147}{ML4PDM-147})
+       \item
+             Reviewed Conclusion of Topic Study document. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-147}{ML4PDM-147})
+       \item
+             Implemented review for RUL and Conclusion chapter. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-158}{ML4PDM-158})
+     \end{enumerate}
+   \end{subsection}
+
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Implement 2nd review of RUL chapter after it is finished.
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 4 \hfill \date{29 January, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Reviewed Health Index Estimation chapter of Topic Study document. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-147}{ML4PDM-147})
+       \item
+             Added Readme for the git concept. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-133}{ML4PDM-133})
+     \end{enumerate}
+   \end{subsection}
+
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Review Introduction of Topic Study document. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-147}{ML4PDM-147})
+       \item
+             Review Conclusion of Topic Study document. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-147}{ML4PDM-147})
+     \end{enumerate}
+   \end{subsection}
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 3 \hfill \date{22 January, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Created GitLab CI pipeline that builds the topic study pdf automatically.
+       \item
+             Developed git concept. (with Vinay, Paul and Sanjay)(\href{https://ml4pdm.atlassian.net/browse/ML4PDM-133}{ML4PDM-133})
+       \item
+             Described Random forests approach \cite{GSCH:jennings2016forecasting, GSCH:cutler2012random} for RUL chapter.\\(\href{https://ml4pdm.atlassian.net/browse/ML4PDM-124}{ML4PDM-124})
+       \item
+             Described Multiple Classifier approach \cite{DBLP:journals/tii/SustoSPMB15} for RUL chapter.\\(\href{https://ml4pdm.atlassian.net/browse/ML4PDM-131}{ML4PDM-131})
+       \item
+             Written Motivation section of RUL chapter. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-118}{ML4PDM-118})
+     \end{enumerate}
+   \end{subsection}
+
+   \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 2 \hfill \date{15 January, 2021}}
+ \begin{refsection}
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Added notation for all sensor values at a certain time step and added notation for time slices to the formal definition section.
+       \item
+             Written part of Conclusion chapter for the topic study document.\\(\href{https://ml4pdm.atlassian.net/browse/ML4PDM-129}{ML4PDM-129})
+     \end{enumerate}
+   \end{subsection}
+
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Describe Random forests approach \cite{GSCH:jennings2016forecasting, GSCH:cutler2012random} for RUL chapter. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-124}{ML4PDM-124})
+       \item
+             Describe Multiple Classifier approach \cite{DBLP:journals/tii/SustoSPMB15} for RUL chapter. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-131}{ML4PDM-131})
+       \item
+             Write Motivation section of RUL chapter. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-118}{ML4PDM-118})
+     \end{enumerate}
+   \end{subsection}
+
+   \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 1 \hfill \date{8 January, 2021}}
+ \begin{refsection}
+
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Described Embed-RUL approach \cite{DBLP:journals/corr/abs-1709-01073} for RUL chapter. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-122}{ML4PDM-122})
+     \end{enumerate}
+   \end{subsection}
+
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Describe Random forests approach \cite{GSCH:jennings2016forecasting, GSCH:cutler2012random} for RUL chapter. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-124}{ML4PDM-124})
+       \item
+             Describe Multiple Classifier approach \cite{DBLP:journals/tii/SustoSPMB15} for RUL chapter. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-131}{ML4PDM-131})
+     \end{enumerate}
+   \end{subsection}
+
+   \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 52 and 53 \hfill \date{1 January, 2021}}
+ \begin{refsection}
+
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Improved "Formal/Problem Definition" in chapter "Remaining Useful Lifetime Estimation" based on feedback from Tanja.
+     \end{enumerate}
+   \end{subsection}
+
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Describe Embed-RUL approach \cite{DBLP:journals/corr/abs-1709-01073} for RUL chapter. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-122}{ML4PDM-122})
+       \item
+             Describe Random forests approach \cite{GSCH:jennings2016forecasting, GSCH:cutler2012random} for RUL chapter. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-124}{ML4PDM-124})
+       \item
+             Describe Multiple Classifier approach \cite{DBLP:journals/tii/SustoSPMB15} for RUL chapter. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-131}{ML4PDM-131})
+     \end{enumerate}
+   \end{subsection}
+
+   \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here. 
+\newpage
+\begin{section}*{Calendar Week: 51 \hfill \date{18 December, 2020}}
+ \begin{refsection}
+
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Written first version of section "Formal/Problem Definition" in chapter "Remaining Useful Lifetime Estimation". (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-110}{ML4PDM-110})
+       \item
+             Decided on responsibilities and deadlines for chapter "Remaining Useful Lifetime Estimation". (with Vinay)(\href{https://ml4pdm.atlassian.net/browse/ML4PDM-49}{ML4PDM-49})
+     \end{enumerate}
+   \end{subsection}
+
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Improve "Formal/Problem Definition" in chapter "Remaining Useful Lifetime Estimation" based on feedback from Tanja.
+       \item
+             Describe Embed-RUL approach \cite{DBLP:journals/corr/abs-1709-01073} for RUL chapter. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-122}{ML4PDM-122})
+       \item
+             Describe Random forests approach \cite{GSCH:jennings2016forecasting, GSCH:cutler2012random} for RUL chapter. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-124}{ML4PDM-124})
+     \end{enumerate}
+   \end{subsection}
+
+   \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 50 \hfill \date{11 December, 2020}}
+ \begin{refsection}
+
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Finished reading survey "Predicting Remaining Useful Life using Time Series Embeddings based on Recurrent Neural Networks" \cite{DBLP:journals/corr/abs-1709-01073}\\(\href{https://ml4pdm.atlassian.net/browse/ML4PDM-53}{ML4PDM-53})\\
+             \phantom\quad This paper describes a RUL implementation using Recurrent Neural Networks. A RNN Encoder is trained that generates embeddings. These embeddings are compared to normal operation embeddings to generate a health index estimation. The curves of health indices are then again compared to normal operation curves to get the resulting RUL estimation. This approach (Embed-RUL) is compared to Recon-RUL and it is shown that it performs pretty well.
+       \item
+             Finished reading survey "Prediction of Remaining Useful Lifetime (RUL) of turbofan engine using machine learning" \cite{GSCH:mathew2017prediction} (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-54}{ML4PDM-54})\\
+             \phantom\quad This paper introduces the NASA Turbofan dataset detailed. 10 common PdM approaches are compared using the Root Mean Squared Error and plots that show the actual vs. predicted values.
+       \item
+             Finished reading survey "Direct Remaining Useful Life Estimation Based on Support Vector Regression" \cite{DBLP:journals/tie/KhelifCMLFZ17} (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-55}{ML4PDM-55})\\
+             \phantom\quad This paper describes a RUL estimation approach using Support Vector Regression. Special is that the approach directly uses time series data as input instead of first computing an intermediate representation. This leads to reduced complexity and faster execution times which is evaluated at the end of the paper.
+       \item
+             Discussed on the time series representation and loss functions of the "Example Formal Problem Definition". (with Vinay)(\href{https://ml4pdm.atlassian.net/browse/ML4PDM-59}{ML4PDM-59})
+       \item
+             Discussed on structure of the Introduction chapter and work plan for the following sprints. (with group)
+       \item
+             Modified weekly report template to use BibTex instead of BibItems for defining references. Also every reference only has to be added once and not once per page where it is used like before.
+     \end{enumerate}
+   \end{subsection}
+
+   \newpage
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Write first version of section "Formal/Problem Definition" in chapter "Remaining Useful Lifetime Estimation". (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-110}{ML4PDM-110})
+       \item
+             Decide on responsibilities and deadlines for chapter "Remaining Useful Lifetime Estimation". (with Vinay)(\href{https://ml4pdm.atlassian.net/browse/ML4PDM-49}{ML4PDM-49})
+     \end{enumerate}
+   \end{subsection}
+
+   \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 49 \hfill \date{4 December, 2020}}
+ \begin{refsection}
+
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Added state and workflow for "Planned" Tasks/Issues in JIRA.
+       \item
+             Adapted template document for writing the survey "Machine Learning For Predictive Maintenance - A Short Survey".  (with group)
+       \item
+             Discussed on next steps for the writing of the chapter "Remaining Useful Lifetime Estimation" and added JIRA tasks. (with Vinay)
+     \end{enumerate}
+   \end{subsection}
+
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 48 \hfill \date{27 November, 2020}}
+ \begin{refsection}
+
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Finished reading survey "Data-Driven Methods for Predictive Maintenance of Industrial Equipment: A Survey" \cite{DBLP:journals/sj/ZhangYW19}. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-20}{ML4PDM-20}).\\
+             \phantom\quad The paper introduces the general idea of machine learning and deep learning at first. This is followed by the explanation of different PdM approaches and an example of a PdM system for an automatic washing equipment. The paper is concluded by an analysis about the different accuracies that were achieved and suggestions for further research.
+     \end{enumerate}
+   \end{subsection}
+
+   \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 47 \hfill \date{20 November, 2020}}
+ \begin{refsection}
+
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Finished reading survey "A survey of predictive maintenance: Systems, purposes and approaches" \cite{DBLP:journals/corr/abs-1912-07383}. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-7}{ML4PDM-7}).\\
+             \phantom\quad The paper introduces the three different maintenance approaches in great detail. It describes standards and architectures that are recommended for PdM. The survey also explains the different goals of optimization for companies. It then gives a very extensive overview of the developed ML approaches and state-of-the-art techniques for PdM including the most important pros and cons.
+       \item
+             Finished reading survey "A systematic literature review of machine learning methods applied to predictive maintenance" \cite{DBLP:journals/candie/CarvalhoSVFBA19}. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-29}{ML4PDM-29}).\\
+             \phantom\quad Shortly introduces the three different maintenance approaches and gives a systematic literature review thereafter. It is shown that there is a limited, but exponentially growing number of publications related to PdM. The paper then describes the used ML approaches and findings of the researchers for RF, ANN, SVM and K-means. The paper concludes with a recommendation of future research topics.
+       \item
+             Fixed PDF preview issue in GitLab by reducing logo size by 420KB.
+     \end{enumerate}
+   \end{subsection}
+
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Reading survey "Data-Driven Methods for Predictive Maintenance of Industrial Equipment: A Survey" \cite{DBLP:journals/sj/ZhangYW19}. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-20}{ML4PDM-20}).
+     \end{enumerate}
+   \end{subsection}
+
+   \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 46 \hfill \date{13 November, 2020}}
+ \begin{refsection}
+
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             JIRA: Added "Reject" transition to "Review" phase.
+       \item
+             GitLab: Updated Readme files with Markdown for being displayed by GitLab.
+     \end{enumerate}
+   \end{subsection}
+
+   \begin{subsection}*{Challenges}
+     \begin{enumerate}
+       \item
+             Understanding the formulas on page 12 and the following in \cite{DBLP:journals/corr/abs-1912-07383}.
+     \end{enumerate}
+   \end{subsection}
+
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Reading survey "A Survey of Predictive Maintenance: Systems, Purposes, and Approaches" \cite{DBLP:journals/corr/abs-1912-07383}. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-7}{ML4PDM-7})
+     \end{enumerate}
+   \end{subsection}
+
+   \printbibliography
+ \end{refsection}
+\end{section}
+% Page End here.
+
+% New page start here.
+\newpage
+\begin{section}*{Calendar Week: 45 \hfill \date{06 November, 2020}}
+ \begin{refsection}
+
+   \begin{subsection}*{Completed Tasks}
+     \begin{enumerate}
+       \item
+             Worked on "Weekly Report Template". (with group)
+       \item
+             Set-up JIRA Instance (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-39}{ML4PDM-39})
+             \begin{enumerate}
+               \item
+                     Invited all project group members
+               \item
+                     Created initial tasks that were mentioned in the Organizational sheet. (with Vinay)
+               \item
+                     Created milestones that were mentioned in the Organizational sheet. (with Vinay)
+               \item
+                     Added basic workflow for Issues
+               \item
+                     Added JIRA Integration in Teams channel "Allgemein"
+
+             \end{enumerate}
+       \item
+             Added "GitLab Updates" Teams channel that reports all changes in the Repository. (with Paul).
+     \end{enumerate}
+   \end{subsection}
+
+   \begin{subsection}*{Challenges}
+     \begin{enumerate}
+       \item
+             Grasping the enormous amount of features that JIRA provides.
+     \end{enumerate}
+   \end{subsection}
+
+   \begin{subsection}*{Tasks in-progress}
+     \begin{enumerate}
+       \item
+             Reading survey "A Survey of Predictive Maintenance: Systems, Purposes, and Approaches" \cite{DBLP:journals/corr/abs-1912-07383}. (\href{https://ml4pdm.atlassian.net/browse/ML4PDM-7}{ML4PDM-7})
+     \end{enumerate}
+   \end{subsection}
+
+   \printbibliography
+ \end{refsection}
+\end{section}
+% Page end here.
+
+\end{document}

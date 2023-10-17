@@ -1,0 +1,39 @@
+we have these keywords
+@RELATION	<name>
+@ATTRIBUTE	<name>	<attribute-type>
+@TARGET		<name>	<target-type>
+@DATA
+
+%extension idea: make @TARGET more general => <target-type> equals <attribute-type>
+%extension idea: DATETIME just long (NUMERIC), we can convert long into date and time
+
+%DATETIME 			=> MM/DD/YYYY-HHMMSSsssss
+<attribute-type> 	=> NUMERIC, {a,b,c}, DATETIME, STRING, TIMESERIES(<time-step-type>, <attribute-type>), MULTIDIMENSIONAL[dim_1, dim_2, ..., dim_n]
+<time-step-type> 	=> NUMERIC, DATETIME
+<name> 				=> STRING
+<target-type>		=> NUMERIC, {a,b,c}
+
+#				attribute-seperator
+{} 				timeseries encapsulator
+:  				timestep-attribute seperator
+,				seperator
+[]				array
+(?				missing values/attributes)
+ (white space) 	multidimensional seperator
+
+
+
+@RELATION	example
+
+@ATTRIBUTE	run			TIMESERIES(NUMERIC, NUMERIC)
+@ATTRIBUTE	singular	NUMERIC
+@ATTRIBUTE	ts_1		TIMESERIES(DATETIME, TIMESERIES(NUMERIC,NUMERIC))
+@ATTRIBUTE	ts_3		TIMESERIES(NUMERIC, MULTIDIMENSIONAL[2])
+
+@DATA
+%instance 1
+{0:8.5,1:7.16}#16.5#{12/24/2018-045931:{15:200,16:234},12/25/2018-045931:{15:197,16:220}}#{1:[0,8]}
+%instance 2
+{0:8.5,1:7.16}#16.5#{12/24/2018-045931:{15:200,16:234},12/25/2018-045931:{15:197,16:220}}#{1:[0,7]}
+%instance 500
+
